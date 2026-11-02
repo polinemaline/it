@@ -35,7 +35,7 @@
     tokenTabs.forEach(t => { t.setAttribute('aria-selected', String(t === tab)); t.tabIndex = t === tab ? 0 : -1; });
     tokenTitle.textContent = tokenData[key][0]; tokenDescription.textContent = tokenData[key][1];
     coinContainer.classList.toggle('fungible', key === 'fungible');
-    coinContainer.querySelectorAll('span').forEach((node, i) => { node.textContent = key === 'fungible' ? '●' : `0${i+1}`; });
+    coinContainer.querySelectorAll('span').forEach((node, i) => { node.textContent = key === 'fungible' ? '01' : `0${i+1}`; });
     tokenPanel.setAttribute('aria-labelledby', tab.id);
   }));
   const stepData = [
@@ -61,10 +61,4 @@
     choice.classList.add(ok ? 'correct' : 'incorrect');
     feedback.textContent = ok ? 'Верно! Общий проверяемый реестр особенно полезен независимым участникам, которым нужен согласованный механизм учёта.' : 'Не совсем. Подумайте, когда участникам особенно важно подтверждать операции без единого доверенного оператора.';
   }));
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const revealNodes = [...document.querySelectorAll('.story-body h2,.story-body h3,.research-card,.toc-list a,.feature-title,.conclusion-item')];
-    revealNodes.forEach(el=>el.classList.add('reveal'));
-    const observer = new IntersectionObserver(entries => entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.06,rootMargin:'0px 0px 65px 0px'});
-    revealNodes.forEach(node=>observer.observe(node));
-  }
 })();
