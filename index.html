@@ -1,891 +1,737 @@
 <!DOCTYPE html>
+
 <html lang="ru">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="#f8f8f6" name="theme-color"/>
-  <meta content="Web 3.0, NFT &icy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &rcy;&acy;&bcy;&ocy;&chcy;&icy;&iecy; &pcy;&rcy;&ocy;&scy;&tcy;&rcy;&acy;&ncy;&scy;&tcy;&vcy;&acy;: &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy;, &pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&iecy;, &rcy;&icy;&scy;&kcy;&icy; &icy; &icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;." name="description"/>
-  <meta content="&Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy; &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy; &mdash; Web 3.0, NFT &icy; &rcy;&acy;&bcy;&ocy;&tcy;&acy; &bcy;&iecy;&zcy; &gcy;&rcy;&acy;&ncy;&icy;&tscy;" property="og:title"/>
-  <meta content="&Pcy;&ocy;&dcy;&rcy;&ocy;&bcy;&ncy;&ycy;&jcy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy; &ocy; &tcy;&ocy;&kcy;&iecy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&icy;, &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;&iecy;, &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ocy;&jcy; &rcy;&acy;&bcy;&ocy;&tcy;&iecy; &icy; &ncy;&ocy;&vcy;&ycy;&khcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&khcy; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&khcy;." property="og:description"/>
-  <meta content="article" property="og:type"/>
-  <title>
-   &Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy; &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy; &mdash; Web 3.0, NFT &icy; &rcy;&acy;&bcy;&ocy;&tcy;&acy; &bcy;&iecy;&zcy; &gcy;&rcy;&acy;&ncy;&icy;&tscy;
-  </title>
-  <link href="styles.css" rel="stylesheet"/>
-  <script defer="" src="script.js">
-  </script>
- </head>
- <body>
-  <div aria-hidden="true" class="reading-progress" id="reading-progress">
-  </div>
-  <a class="skip-link" href="#introduction">
-   &Pcy;&iecy;&rcy;&iecy;&jcy;&tcy;&icy; &kcy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ucy;
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f8f8f6" name="theme-color"/>
+<meta content="Обзор архитектуры Web 3.0, токенизации NFT, технологий удалённой работы, информационной безопасности и результатов исследований." name="description"/>
+<meta content="Современные интернет-технологии: Web 3.0, NFT и удалённая работа" property="og:title"/>
+<meta content="Аналитический обзор Web 3.0, NFT и цифровой инфраструктуры удалённой работы." property="og:description"/>
+<meta content="article" property="og:type"/>
+<title>Современные интернет-технологии: Web 3.0, NFT и удалённая работа</title>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js">
+</script>
+</head>
+<body>
+<div aria-hidden="true" class="reading-progress" id="reading-progress">
+</div>
+<a class="skip-link" href="#introduction">
+   Перейти к материалу
   </a>
-  <header class="site-header" id="top">
-   <a aria-label="&Kcy; &ncy;&acy;&chcy;&acy;&lcy;&ucy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy;" class="brand" href="#top">
-    &Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy; &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy;
-   </a>
-   <nav aria-label="&Gcy;&lcy;&acy;&vcy;&ncy;&ocy;&iecy; &mcy;&iecy;&ncy;&yucy;" class="header-nav">
-    <a href="#contents">
-     &Ocy;&gcy;&lcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy;
+<header class="site-header" id="top">
+<a aria-label="К началу страницы" class="brand" href="#top">Современные интернет-технологии</a>
+<nav aria-label="Главное меню" class="header-nav">
+<a href="#contents">
+     Оглавление
     </a>
-    <a href="#research">
-     &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;
+<a href="#research">
+     Исследования
     </a>
-    <a href="#sources">
-     &Icy;&scy;&tcy;&ocy;&chcy;&ncy;&icy;&kcy;&icy;
+<a href="#sources">
+     Источники
     </a>
-   </nav>
-   <button aria-controls="mobile-menu" aria-expanded="false" aria-label="&Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&softcy; &mcy;&iecy;&ncy;&yucy;" class="header-menu" id="menu-toggle">
-    &Mcy;&iecy;&ncy;&yucy;
+</nav>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Открыть меню" class="header-menu" id="menu-toggle">
+    Меню
    </button>
-  </header>
-  <nav aria-label="&Mcy;&ocy;&bcy;&icy;&lcy;&softcy;&ncy;&ocy;&iecy; &mcy;&iecy;&ncy;&yucy;" class="mobile-menu" hidden="" id="mobile-menu">
-   <a href="#contents">
-    &Ocy;&gcy;&lcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy;
+</header>
+<nav aria-label="Мобильное меню" class="mobile-menu" hidden="" id="mobile-menu">
+<a href="#contents">
+    Оглавление
    </a>
-   <a href="#research">
-    &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;
+<a href="#research">
+    Исследования
    </a>
-   <a href="#sources">
-    &Icy;&scy;&tcy;&ocy;&chcy;&ncy;&icy;&kcy;&icy;
+<a href="#sources">
+    Источники
    </a>
-  </nav>
-  <main>
-   <section aria-labelledby="hero-title" class="hero">
-    <div class="hero-shell">
-     <div class="hero-copy">
-      <p class="eyebrow">
-       WEB 3.0 &middot; NFT &middot; &TScy;&Icy;&Fcy;&Rcy;&Ocy;&Vcy;&Acy;&YAcy; &Rcy;&Acy;&Bcy;&Ocy;&Tcy;&Acy;
-      </p>
-      <h1 id="hero-title">
-       &Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy;
-       <br/>
-       <em>
-        &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy;
-       </em>
-      </h1>
-      <p class="hero-subtitle">
-       &Kcy;&acy;&kcy; Web 3.0 &mcy;&iecy;&ncy;&yacy;&iecy;&tcy; &pcy;&rcy;&iecy;&dcy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &ocy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&jcy; &scy;&ocy;&bcy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&icy; &mdash; &icy; &pcy;&ocy;&chcy;&iecy;&mcy;&ucy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&icy;&jcy; &ocy;&fcy;&icy;&scy; &mcy;&ocy;&zhcy;&iecy;&tcy; &ncy;&iecy; &icy;&mcy;&iecy;&tcy;&softcy; &acy;&dcy;&rcy;&iecy;&scy;&acy;.
-      </p>
-      <div class="hero-actions">
-       <a class="pill-btn primary" href="#introduction">
-        &Ncy;&acy;&chcy;&acy;&tcy;&softcy; &chcy;&tcy;&iecy;&ncy;&icy;&iecy;
-       </a>
-       <a class="text-link light" href="#contents">
-        &Scy;&ocy;&dcy;&iecy;&rcy;&zhcy;&acy;&ncy;&icy;&iecy;
-       </a>
-      </div>
+</nav>
+<main>
+<section aria-labelledby="hero-title" class="hero">
+<div class="hero-shell">
+<div class="hero-copy">
+<p class="eyebrow">WEB 3.0 / NFT / УДАЛЁННАЯ РАБОТА</p>
+<h1 id="hero-title">Современные интернет-технологии</h1>
+<p class="hero-subtitle">Web 3.0, токенизация NFT и цифровая инфраструктура удалённой работы: принципы, применение, ограничения и результаты исследований.</p>
+<div class="hero-actions">
+<a class="pill-btn primary" href="#introduction">Перейти к материалу</a>
+<a class="text-link light" href="#contents">Оглавление</a>
+</div>
+</div>
+</div>
+</section>
+<section class="intro-section section-pad" id="introduction">
+<div class="container intro-grid">
+<div class="section-index">
+      00 / ВСТУПЛЕНИЕ
      </div>
-    </div>
-   </section>
-   <section class="intro-section section-pad" id="introduction">
-    <div class="container intro-grid">
-     <div class="section-index">
-      00 / &Vcy;&Scy;&Tcy;&Ucy;&Pcy;&Lcy;&IEcy;&Ncy;&Icy;&IEcy;
-     </div>
-     <div class="intro-content">
-      <p class="lead">
-       &Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy; &dcy;&acy;&vcy;&ncy;&ocy; &pcy;&iecy;&rcy;&iecy;&scy;&tcy;&acy;&lcy; &bcy;&ycy;&tcy;&softcy; &pcy;&rcy;&ocy;&scy;&tcy;&ocy; &pcy;&rcy;&ocy;&scy;&tcy;&rcy;&acy;&ncy;&scy;&tcy;&vcy;&ocy;&mcy; &dcy;&lcy;&yacy; &pcy;&rcy;&ocy;&scy;&mcy;&ocy;&tcy;&rcy;&acy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;. &Scy;&iecy;&gcy;&ocy;&dcy;&ncy;&yacy; &ocy;&ncy; &ocy;&dcy;&ncy;&ocy;&vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&ncy;&ocy; &scy;&lcy;&ucy;&zhcy;&icy;&tcy; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&ocy;&jcy; &ecy;&kcy;&ocy;&ncy;&ocy;&mcy;&icy;&kcy;&icy;, &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&ocy;&jcy; &dcy;&lcy;&yacy; &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&ncy;&ocy;&jcy; &rcy;&acy;&bcy;&ocy;&tcy;&ycy; &icy; &scy;&rcy;&iecy;&dcy;&ocy;&jcy;, &vcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ocy;&jcy; &vcy;&ocy;&zcy;&ncy;&icy;&kcy;&acy;&yucy;&tcy; &ncy;&ocy;&vcy;&ycy;&iecy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ycy; &pcy;&ocy;&dcy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&acy;&tcy;&softcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&acy;.
+<div class="intro-content">
+<p class="lead">Современный интернет обеспечивает не только публикацию и просмотр веб-страниц, но и доступ к вычислительным ресурсам, цифровым сервисам и средствам совместной работы. Его инфраструктура используется в экономике, образовании и корпоративном взаимодействии.</p>
+<p>
+       Облачные вычисления позволяют получать доступ к приложениям из любой точки мира. Искусственный интеллект помогает находить знания в корпоративных системах и автоматизировать повторяющиеся задачи. Блокчейн предлагает способ вести проверяемый реестр операций без обязательного доверия к одному оператору. А технологии виртуальной и дополненной реальности расширяют возможности совместного присутствия.
       </p>
-      <p>
-       &Ocy;&bcy;&lcy;&acy;&chcy;&ncy;&ycy;&iecy; &vcy;&ycy;&chcy;&icy;&scy;&lcy;&iecy;&ncy;&icy;&yacy; &pcy;&ocy;&zcy;&vcy;&ocy;&lcy;&yacy;&yucy;&tcy; &pcy;&ocy;&lcy;&ucy;&chcy;&acy;&tcy;&softcy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy; &kcy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy;&mcy; &icy;&zcy; &lcy;&yucy;&bcy;&ocy;&jcy; &tcy;&ocy;&chcy;&kcy;&icy; &mcy;&icy;&rcy;&acy;. &Icy;&scy;&kcy;&ucy;&scy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ycy;&jcy; &icy;&ncy;&tcy;&iecy;&lcy;&lcy;&iecy;&kcy;&tcy; &pcy;&ocy;&mcy;&ocy;&gcy;&acy;&iecy;&tcy; &ncy;&acy;&khcy;&ocy;&dcy;&icy;&tcy;&softcy; &zcy;&ncy;&acy;&ncy;&icy;&yacy; &vcy; &kcy;&ocy;&rcy;&pcy;&ocy;&rcy;&acy;&tcy;&icy;&vcy;&ncy;&ycy;&khcy; &scy;&icy;&scy;&tcy;&iecy;&mcy;&acy;&khcy; &icy; &acy;&vcy;&tcy;&ocy;&mcy;&acy;&tcy;&icy;&zcy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy; &pcy;&ocy;&vcy;&tcy;&ocy;&rcy;&yacy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &zcy;&acy;&dcy;&acy;&chcy;&icy;. &Bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy; &pcy;&rcy;&iecy;&dcy;&lcy;&acy;&gcy;&acy;&iecy;&tcy; &scy;&pcy;&ocy;&scy;&ocy;&bcy; &vcy;&iecy;&scy;&tcy;&icy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&mcy;&ycy;&jcy; &rcy;&iecy;&iecy;&scy;&tcy;&rcy; &ocy;&pcy;&iecy;&rcy;&acy;&tscy;&icy;&jcy; &bcy;&iecy;&zcy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&gcy;&ocy; &dcy;&ocy;&vcy;&iecy;&rcy;&icy;&yacy; &kcy; &ocy;&dcy;&ncy;&ocy;&mcy;&ucy; &ocy;&pcy;&iecy;&rcy;&acy;&tcy;&ocy;&rcy;&ucy;. &Acy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &vcy;&icy;&rcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &icy; &dcy;&ocy;&pcy;&ocy;&lcy;&ncy;&iecy;&ncy;&ncy;&ocy;&jcy; &rcy;&iecy;&acy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&icy; &rcy;&acy;&scy;&shcy;&icy;&rcy;&yacy;&yucy;&tcy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy; &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&ncy;&ocy;&gcy;&ocy; &pcy;&rcy;&icy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&yacy;.
-      </p>
-      <p>
-       &Zcy;&dcy;&iecy;&scy;&softcy; &rcy;&acy;&scy;&scy;&mcy;&ocy;&tcy;&rcy;&iecy;&ncy;&ycy; &dcy;&vcy;&acy; &ncy;&acy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&yacy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&khcy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&jcy; &mdash;
-       <strong>
-        &tcy;&ocy;&kcy;&iecy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &ncy;&acy; &ocy;&scy;&ncy;&ocy;&vcy;&iecy; NFT
-       </strong>
-       &icy;
-       <strong>
-        &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ycy;&jcy; &fcy;&ocy;&rcy;&mcy;&acy;&tcy; &rcy;&acy;&bcy;&ocy;&tcy;&ycy;
-       </strong>
-       . &Ocy;&bcy;&acy; &pcy;&ocy;&kcy;&acy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy;, &kcy;&acy;&kcy; &mcy;&iecy;&ncy;&yacy;&yucy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ycy; &vcy;&zcy;&acy;&icy;&mcy;&ocy;&dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&yacy; &scy; &dcy;&acy;&ncy;&ncy;&ycy;&mcy;&icy;, &scy;&iecy;&rcy;&vcy;&icy;&scy;&acy;&mcy;&icy; &icy; &dcy;&rcy;&ucy;&gcy; &scy; &dcy;&rcy;&ucy;&gcy;&ocy;&mcy;.
-      </p>
-      <div class="audio-card" id="audio-card">
-       <div class="audio-main">
-        <strong>
-         &Pcy;&ocy;&scy;&lcy;&ucy;&shcy;&acy;&tcy;&softcy; &vcy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
-        </strong>
-        <span>
-         &Kcy;&rcy;&acy;&tcy;&kcy;&acy;&yacy; &acy;&ucy;&dcy;&icy;&ocy;&vcy;&iecy;&rcy;&scy;&icy;&yacy; &vcy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&yacy;
-        </span>
-        <audio controls="" preload="none" src="assets/intro.mp3">
-         &Vcy;&acy;&shcy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy; &ncy;&iecy; &pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&icy;&vcy;&acy;&iecy;&tcy; &acy;&ucy;&dcy;&icy;&ocy;. &Pcy;&rcy;&ocy;&chcy;&icy;&tcy;&acy;&jcy;&tcy;&iecy; &vcy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy; &vcy;&ycy;&shcy;&iecy;.
-        </audio>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section aria-labelledby="toc-heading" class="toc-section" id="contents">
-    <div class="container">
-     <div class="toc-heading">
-      <p class="kicker">
-       &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &rcy;&acy;&zcy;&dcy;&iecy;&lcy;, &chcy;&tcy;&ocy;&bcy;&ycy; &pcy;&iecy;&rcy;&iecy;&jcy;&tcy;&icy; &kcy; &chcy;&tcy;&iecy;&ncy;&icy;&yucy;.
-      </p>
-      <h2 id="toc-heading">
-       &Tcy;&iecy;&mcy;&ycy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&acy;
-      </h2>
-      <p>
-       &Kcy;&acy;&zhcy;&dcy;&acy;&yacy; &gcy;&lcy;&acy;&vcy;&acy; &rcy;&acy;&scy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy; &ocy;&tcy;&dcy;&iecy;&lcy;&softcy;&ncy;&ucy;&yucy; &scy;&tcy;&ocy;&rcy;&ocy;&ncy;&ucy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&gcy;&ocy; &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy;. &Ncy;&acy;&zhcy;&mcy;&icy;&tcy;&iecy; &ncy;&acy; &rcy;&acy;&zcy;&dcy;&iecy;&lcy;, &chcy;&tcy;&ocy;&bcy;&ycy; &pcy;&iecy;&rcy;&iecy;&jcy;&tcy;&icy; &kcy; &ncy;&iecy;&mcy;&ucy;.
-      </p>
-     </div>
-     <nav aria-label="&Kcy;&lcy;&icy;&kcy;&acy;&bcy;&iecy;&lcy;&softcy;&ncy;&ocy;&iecy; &scy;&ocy;&dcy;&iecy;&rcy;&zhcy;&acy;&ncy;&icy;&iecy;" class="toc-list">
-      <a href="#web3">
-       <span>
+<p>В материале рассматриваются два направления: токенизация на основе NFT и цифровые средства организации удалённой работы. Первое связано с учётом уникальных цифровых активов, второе — с построением распределённых рабочих процессов.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="toc-heading" class="toc-section" id="contents">
+<div class="container">
+<div class="toc-heading">
+<p class="kicker">НАВИГАЦИЯ ПО МАТЕРИАЛУ</p>
+<h2 id="toc-heading">Содержание</h2>
+<p>Разделы посвящены технологиям Web 3.0, токенизации, удалённой работе и практическим исследованиям.</p>
+</div>
+<nav aria-label="Кликабельное содержание" class="toc-list">
+<a href="#web3">
+<span>
         01
        </span>
-       <strong>
-        &CHcy;&tcy;&ocy; &tcy;&acy;&kcy;&ocy;&iecy; Web 3.0
-       </strong>
-      </a>
-      <a href="#nft">
-       <span>
+<strong>Архитектура Web 3.0</strong>
+</a>
+<a href="#nft">
+<span>
         02
        </span>
-       <strong>
-        NFT: &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy; &vcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&mcy; &mcy;&icy;&rcy;&iecy;
-       </strong>
-      </a>
-      <a href="#lifecycle">
-       <span>
+<strong>Невзаимозаменяемые токены (NFT)</strong>
+</a>
+<a href="#lifecycle">
+<span>
         03
        </span>
-       <strong>
-        &Kcy;&acy;&kcy; &rcy;&acy;&bcy;&ocy;&tcy;&acy;&iecy;&tcy; &tcy;&ocy;&kcy;&iecy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy;
-       </strong>
-      </a>
-      <a href="#remote">
-       <span>
+<strong>Жизненный цикл NFT</strong>
+</a>
+<a href="#remote">
+<span>
         04
        </span>
-       <strong>
-        &Rcy;&acy;&bcy;&ocy;&tcy;&acy; &bcy;&iecy;&zcy; &ocy;&fcy;&icy;&scy;&acy;
-       </strong>
-      </a>
-      <a href="#future">
-       <span>
+<strong>Технологии удалённой работы</strong>
+</a>
+<a href="#future">
+<span>
         05
        </span>
-       <strong>
-        &Icy;&Icy;, VR/AR &icy; &bcy;&iecy;&zcy;&ocy;&pcy;&acy;&scy;&ncy;&ycy;&jcy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;
-       </strong>
-      </a>
-      <a href="#research">
-       <span>
+<strong>Цифровая инфраструктура и безопасность</strong>
+</a>
+<a href="#research">
+<span>
         06
        </span>
-       <strong>
-        &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &icy; &rcy;&iecy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &kcy;&iecy;&jcy;&scy;&ycy;
-       </strong>
-      </a>
-     </nav>
-    </div>
-   </section>
-   <section class="story-section section-pad" id="web3">
-    <div class="container content-grid">
-     <div class="sticky-aside">
-      <div class="section-index">
-       01 / &Kcy;&Ocy;&Ncy;&Tcy;&IEcy;&Kcy;&Scy;&Tcy;
+<strong>Исследования и практические примеры</strong>
+</a>
+</nav>
+</div>
+</section>
+<section class="story-section section-pad" id="web3">
+<div class="container content-grid">
+<div class="sticky-aside">
+<div class="section-index">
+       01 / КОНТЕКСТ
       </div>
-      <p class="aside-prompt">
-       &Kcy;&tcy;&ocy; &kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&icy;&rcy;&ucy;&iecy;&tcy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy; &mdash; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&acy; &icy;&lcy;&icy; &pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&softcy;?
+</div>
+<div class="story-body">
+<p class="eyebrow green">АРХИТЕКТУРА ИНТЕРНЕТ-СЕРВИСОВ</p>
+<h2>Архитектура Web 3.0 и модели управления данными</h2>
+<p class="chapter-lead">Web 3.0 представляет собой совокупность развивающихся подходов к построению интернет-сервисов с применением распределённых реестров, смарт-контрактов и цифровой идентичности. Единого общепринятого стандарта Web 3.0 не существует.</p>
+<p>
+       В привычных веб-сервисах большая часть данных, правил и транзакций находится под контролем оператора платформы. Такой подход удобен: пользователю обычно достаточно создать аккаунт и доверить сервису хранение информации. Однако вместе с удобством возникает зависимость от конкретной компании, её технической инфраструктуры, правил модерации и условий доступа.
       </p>
-     </div>
-     <div class="story-body">
-      <p class="eyebrow green">
-       &Ncy;&Ocy;&Vcy;&Acy;&YAcy; &Acy;&Rcy;&KHcy;&Icy;&Tcy;&IEcy;&Kcy;&Tcy;&Ucy;&Rcy;&Acy; &Icy;&Ncy;&Tcy;&IEcy;&Rcy;&Ncy;&IEcy;&Tcy;&Acy;
+<p>
+       В децентрализованных сценариях часть операций может подтверждаться сетью независимых узлов. Смарт-контракт — программа, работающая в соответствующей блокчейн-среде, — фиксирует допустимые действия и выполняет их при соблюдении заданных условий. Пользователю становится проще проверить, что определённая запись существует и как изменялась её история.
       </p>
-      <h2>
-       &Ocy;&tcy; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&ycy; &kcy;
-       <em>
-        &pcy;&rcy;&ocy;&tcy;&ocy;&kcy;&ocy;&lcy;&ucy;.
-       </em>
-      </h2>
-      <p class="chapter-lead">
-       Web 3.0 &mdash; &ncy;&iecy; &ocy;&tcy;&dcy;&iecy;&lcy;&softcy;&ncy;&acy;&yacy; &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&acy; &icy; &ncy;&iecy; &iecy;&dcy;&icy;&ncy;&ycy;&jcy; &ucy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&iocy;&ncy;&ncy;&ycy;&jcy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;. &Ecy;&tcy;&ocy; &scy;&ocy;&vcy;&ocy;&kcy;&ucy;&pcy;&ncy;&ocy;&scy;&tcy;&softcy; &pcy;&ocy;&dcy;&khcy;&ocy;&dcy;&ocy;&vcy;, &vcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&iecy; &vcy;&zcy;&acy;&icy;&mcy;&ocy;&dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&iecy; &vcy;&scy;&iocy; &chcy;&acy;&shchcy;&iecy; &ocy;&pcy;&icy;&rcy;&acy;&iecy;&tcy;&scy;&yacy; &ncy;&acy; &rcy;&acy;&scy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&ycy;&iecy; &rcy;&iecy;&iecy;&scy;&tcy;&rcy;&ycy;, &scy;&mcy;&acy;&rcy;&tcy;-&kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy;&ycy; &icy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&mcy;&ucy;&yucy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ucy;&yucy; &icy;&dcy;&iecy;&ncy;&tcy;&icy;&chcy;&ncy;&ocy;&scy;&tcy;&softcy;.
+<p>
+       Это
+       
+        не отменяет необходимости доверия вообще
+       
+       . Нужно доверять реализации протокола, корректности смарт-контракта, безопасности ключей и источнику данных. Если изначально записано неверное утверждение, его неизменность не сделает утверждение истинным.
       </p>
-      <p>
-       &Vcy; &pcy;&rcy;&icy;&vcy;&ycy;&chcy;&ncy;&ycy;&khcy; &vcy;&iecy;&bcy;-&scy;&iecy;&rcy;&vcy;&icy;&scy;&acy;&khcy; &bcy;&ocy;&lcy;&softcy;&shcy;&acy;&yacy; &chcy;&acy;&scy;&tcy;&softcy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;, &pcy;&rcy;&acy;&vcy;&icy;&lcy; &icy; &tcy;&rcy;&acy;&ncy;&zcy;&acy;&kcy;&tscy;&icy;&jcy; &ncy;&acy;&khcy;&ocy;&dcy;&icy;&tcy;&scy;&yacy; &pcy;&ocy;&dcy; &kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&iecy;&mcy; &ocy;&pcy;&iecy;&rcy;&acy;&tcy;&ocy;&rcy;&acy; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&ycy;. &Tcy;&acy;&kcy;&ocy;&jcy; &pcy;&ocy;&dcy;&khcy;&ocy;&dcy; &ucy;&dcy;&ocy;&bcy;&iecy;&ncy;: &pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&yucy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy; &dcy;&ocy;&scy;&tcy;&acy;&tcy;&ocy;&chcy;&ncy;&ocy; &scy;&ocy;&zcy;&dcy;&acy;&tcy;&softcy; &acy;&kcy;&kcy;&acy;&ucy;&ncy;&tcy; &icy; &dcy;&ocy;&vcy;&iecy;&rcy;&icy;&tcy;&softcy; &scy;&iecy;&rcy;&vcy;&icy;&scy;&ucy; &khcy;&rcy;&acy;&ncy;&iecy;&ncy;&icy;&iecy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&icy;. &Ocy;&dcy;&ncy;&acy;&kcy;&ocy; &vcy;&mcy;&iecy;&scy;&tcy;&iecy; &scy; &ucy;&dcy;&ocy;&bcy;&scy;&tcy;&vcy;&ocy;&mcy; &vcy;&ocy;&zcy;&ncy;&icy;&kcy;&acy;&iecy;&tcy; &zcy;&acy;&vcy;&icy;&scy;&icy;&mcy;&ocy;&scy;&tcy;&softcy; &ocy;&tcy; &kcy;&ocy;&ncy;&kcy;&rcy;&iecy;&tcy;&ncy;&ocy;&jcy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&icy;, &iecy;&iocy; &tcy;&iecy;&khcy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&ocy;&jcy; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&ycy;, &pcy;&rcy;&acy;&vcy;&icy;&lcy; &mcy;&ocy;&dcy;&iecy;&rcy;&acy;&tscy;&icy;&icy; &icy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&jcy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;.
-      </p>
-      <p>
-       &Vcy; &dcy;&iecy;&tscy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;&acy;&ncy;&ncy;&ycy;&khcy; &scy;&tscy;&iecy;&ncy;&acy;&rcy;&icy;&yacy;&khcy; &chcy;&acy;&scy;&tcy;&softcy; &ocy;&pcy;&iecy;&rcy;&acy;&tscy;&icy;&jcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &pcy;&ocy;&dcy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&acy;&tcy;&softcy;&scy;&yacy; &scy;&iecy;&tcy;&softcy;&yucy; &ncy;&iecy;&zcy;&acy;&vcy;&icy;&scy;&icy;&mcy;&ycy;&khcy; &ucy;&zcy;&lcy;&ocy;&vcy;. &Scy;&mcy;&acy;&rcy;&tcy;-&kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy; &mdash; &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&acy;, &rcy;&acy;&bcy;&ocy;&tcy;&acy;&yucy;&shchcy;&acy;&yacy; &vcy; &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&ucy;&yucy;&shchcy;&iecy;&jcy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;-&scy;&rcy;&iecy;&dcy;&iecy;, &mdash; &fcy;&icy;&kcy;&scy;&icy;&rcy;&ucy;&iecy;&tcy; &dcy;&ocy;&pcy;&ucy;&scy;&tcy;&icy;&mcy;&ycy;&iecy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&yacy; &icy; &vcy;&ycy;&pcy;&ocy;&lcy;&ncy;&yacy;&iecy;&tcy; &icy;&khcy; &pcy;&rcy;&icy; &scy;&ocy;&bcy;&lcy;&yucy;&dcy;&iecy;&ncy;&icy;&icy; &zcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&khcy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&jcy;. &Pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&yucy; &scy;&tcy;&acy;&ncy;&ocy;&vcy;&icy;&tcy;&scy;&yacy; &pcy;&rcy;&ocy;&shchcy;&iecy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&icy;&tcy;&softcy;, &chcy;&tcy;&ocy; &ocy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&acy;&yacy; &zcy;&acy;&pcy;&icy;&scy;&softcy; &scy;&ucy;&shchcy;&iecy;&scy;&tcy;&vcy;&ucy;&iecy;&tcy; &icy; &kcy;&acy;&kcy; &icy;&zcy;&mcy;&iecy;&ncy;&yacy;&lcy;&acy;&scy;&softcy; &iecy;&iocy; &icy;&scy;&tcy;&ocy;&rcy;&icy;&yacy;.
-      </p>
-      <p>
-       &Ecy;&tcy;&ocy;
-       <strong>
-        &ncy;&iecy; &ocy;&tcy;&mcy;&iecy;&ncy;&yacy;&iecy;&tcy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy;&scy;&tcy;&icy; &dcy;&ocy;&vcy;&iecy;&rcy;&icy;&yacy; &vcy;&ocy;&ocy;&bcy;&shchcy;&iecy;
-       </strong>
-       . &Ncy;&ucy;&zhcy;&ncy;&ocy; &dcy;&ocy;&vcy;&iecy;&rcy;&yacy;&tcy;&softcy; &rcy;&iecy;&acy;&lcy;&icy;&zcy;&acy;&tscy;&icy;&icy; &pcy;&rcy;&ocy;&tcy;&ocy;&kcy;&ocy;&lcy;&acy;, &kcy;&ocy;&rcy;&rcy;&iecy;&kcy;&tcy;&ncy;&ocy;&scy;&tcy;&icy; &scy;&mcy;&acy;&rcy;&tcy;-&kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy;&acy;, &bcy;&iecy;&zcy;&ocy;&pcy;&acy;&scy;&ncy;&ocy;&scy;&tcy;&icy; &kcy;&lcy;&yucy;&chcy;&iecy;&jcy; &icy; &icy;&scy;&tcy;&ocy;&chcy;&ncy;&icy;&kcy;&ucy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;. &IEcy;&scy;&lcy;&icy; &icy;&zcy;&ncy;&acy;&chcy;&acy;&lcy;&softcy;&ncy;&ocy; &zcy;&acy;&pcy;&icy;&scy;&acy;&ncy;&ocy; &ncy;&iecy;&vcy;&iecy;&rcy;&ncy;&ocy;&iecy; &ucy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&iecy;&ncy;&icy;&iecy;, &iecy;&gcy;&ocy; &ncy;&iecy;&icy;&zcy;&mcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&softcy; &ncy;&iecy; &scy;&dcy;&iecy;&lcy;&acy;&iecy;&tcy; &ucy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&iecy;&ncy;&icy;&iecy; &icy;&scy;&tcy;&icy;&ncy;&ncy;&ycy;&mcy;.
-      </p>
-      <div aria-label="&Scy;&rcy;&acy;&vcy;&ncy;&iecy;&ncy;&icy;&iecy; &dcy;&vcy;&ucy;&khcy; &mcy;&ocy;&dcy;&iecy;&lcy;&iecy;&jcy;" class="compare-grid">
-       <div class="compare-card">
-        <span class="mini-label">
-         &Pcy;&Rcy;&Icy;&Vcy;&Ycy;&CHcy;&Ncy;&Acy;&YAcy; &Mcy;&Ocy;&Dcy;&IEcy;&Lcy;&SOFTcy;
+<div aria-label="Сравнение двух моделей" class="compare-grid">
+<div class="compare-card">
+<span class="mini-label">
+         ПРИВЫЧНАЯ МОДЕЛЬ
         </span>
-        <h3>
-         &TScy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;&acy;&ncy;&ncy;&ycy;&jcy; &scy;&iecy;&rcy;&vcy;&icy;&scy;
+<h3>
+         Централизованный сервис
         </h3>
-        <p>
-         &IEcy;&dcy;&icy;&ncy;&ycy;&jcy; &ocy;&pcy;&iecy;&rcy;&acy;&tcy;&ocy;&rcy; &khcy;&rcy;&acy;&ncy;&icy;&tcy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy; &icy; &ocy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&yacy;&iecy;&tcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &icy;&khcy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&icy;.
+<p>
+         Единый оператор хранит данные и определяет правила их обработки.
         </p>
-        <ul>
-         <li>
-          &Pcy;&rcy;&ocy;&scy;&tcy;&ocy;&tcy;&acy; &ucy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&yacy;
+<ul>
+<li>
+          Простота управления
          </li>
-         <li>
-          &Vcy;&ycy;&scy;&ocy;&kcy;&acy;&yacy; &scy;&kcy;&ocy;&rcy;&ocy;&scy;&tcy;&softcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&jcy;
+<li>
+          Высокая скорость изменений
          </li>
-         <li>
-          &Zcy;&acy;&vcy;&icy;&scy;&icy;&mcy;&ocy;&scy;&tcy;&softcy; &ocy;&tcy; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&ycy;
+<li>
+          Зависимость от платформы
          </li>
-        </ul>
-       </div>
-       <div class="compare-card accent">
-        <span class="mini-label">
-         &Rcy;&Acy;&Scy;&Pcy;&Rcy;&IEcy;&Dcy;&IEcy;&Lcy;&IOcy;&Ncy;&Ncy;&Acy;&YAcy; &Mcy;&Ocy;&Dcy;&IEcy;&Lcy;&SOFTcy;
+</ul>
+</div>
+<div class="compare-card accent">
+<span class="mini-label">
+         РАСПРЕДЕЛЁННАЯ МОДЕЛЬ
         </span>
-        <h3>
+<h3>
          Web 3.0
         </h3>
-        <p>
-         &CHcy;&acy;&scy;&tcy;&softcy; &scy;&ocy;&scy;&tcy;&ocy;&yacy;&ncy;&icy;&jcy; &icy; &ocy;&pcy;&iecy;&rcy;&acy;&tscy;&icy;&jcy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&tcy;&scy;&yacy; &pcy;&ocy; &ocy;&bcy;&shchcy;&icy;&mcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy;&mcy; &scy;&iecy;&tcy;&icy;.
+<p>
+         Часть состояний и операций проверяется по общим правилам сети.
         </p>
-        <ul>
-         <li>
-          &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&mcy;&ocy;&scy;&tcy;&softcy; &zcy;&acy;&pcy;&icy;&scy;&iecy;&jcy;
+<ul>
+<li>
+          Проверяемость записей
          </li>
-         <li>
-          &Mcy;&iecy;&zhcy;&scy;&iecy;&rcy;&vcy;&icy;&scy;&ncy;&acy;&yacy; &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&icy;&mcy;&ocy;&scy;&tcy;&softcy;
+<li>
+          Межсервисная совместимость
          </li>
-         <li>
-          &Bcy;&ocy;&lcy;&iecy;&iecy; &vcy;&ycy;&scy;&ocy;&kcy;&acy;&yacy; &scy;&lcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&softcy;
+<li>
+          Более высокая сложность
          </li>
-        </ul>
-       </div>
+</ul>
+</div>
+</div>
+<p>
+       Именно поэтому Web 3.0 следует оценивать как инструмент решения конкретной задачи, а не как обязательную замену традиционного веба. Когда все участники доверяют одному оператору, централизованная база данных и электронная подпись могут оказаться проще и экономичнее.
+      </p>
+</div>
+</div>
+</section>
+<section class="story-section section-pad" id="nft">
+<div class="container content-grid">
+<div class="sticky-aside">
+<div class="section-index">
+       02 / ЦИФРОВЫЕ АКТИВЫ
       </div>
-      <p>
-       &Icy;&mcy;&iecy;&ncy;&ncy;&ocy; &pcy;&ocy;&ecy;&tcy;&ocy;&mcy;&ucy; Web 3.0 &scy;&lcy;&iecy;&dcy;&ucy;&iecy;&tcy; &ocy;&tscy;&iecy;&ncy;&icy;&vcy;&acy;&tcy;&softcy; &kcy;&acy;&kcy; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy; &rcy;&iecy;&shcy;&iecy;&ncy;&icy;&yacy; &kcy;&ocy;&ncy;&kcy;&rcy;&iecy;&tcy;&ncy;&ocy;&jcy; &zcy;&acy;&dcy;&acy;&chcy;&icy;, &acy; &ncy;&iecy; &kcy;&acy;&kcy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ucy;&yucy; &zcy;&acy;&mcy;&iecy;&ncy;&ucy; &tcy;&rcy;&acy;&dcy;&icy;&tscy;&icy;&ocy;&ncy;&ncy;&ocy;&gcy;&ocy; &vcy;&iecy;&bcy;&acy;. &Kcy;&ocy;&gcy;&dcy;&acy; &vcy;&scy;&iecy; &ucy;&chcy;&acy;&scy;&tcy;&ncy;&icy;&kcy;&icy; &dcy;&ocy;&vcy;&iecy;&rcy;&yacy;&yucy;&tcy; &ocy;&dcy;&ncy;&ocy;&mcy;&ucy; &ocy;&pcy;&iecy;&rcy;&acy;&tcy;&ocy;&rcy;&ucy;, &tscy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;&acy;&ncy;&ncy;&acy;&yacy; &bcy;&acy;&zcy;&acy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy; &icy; &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&acy;&yacy; &pcy;&ocy;&dcy;&pcy;&icy;&scy;&softcy; &mcy;&ocy;&gcy;&ucy;&tcy; &ocy;&kcy;&acy;&zcy;&acy;&tcy;&softcy;&scy;&yacy; &pcy;&rcy;&ocy;&shchcy;&iecy; &icy; &ecy;&kcy;&ocy;&ncy;&ocy;&mcy;&icy;&chcy;&ncy;&iecy;&iecy;.
-      </p>
-     </div>
-    </div>
-   </section>
-   <section class="story-section section-pad" id="nft">
-    <div class="container content-grid">
-     <div class="sticky-aside">
-      <div class="section-index">
-       02 / &TScy;&Icy;&Fcy;&Rcy;&Ocy;&Vcy;&Ycy;&IEcy; &Acy;&Kcy;&Tcy;&Icy;&Vcy;&Ycy;
-      </div>
-      <p class="aside-prompt">
-       &Mcy;&ocy;&zhcy;&iecy;&tcy; &lcy;&icy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&acy;&yacy; &zcy;&acy;&pcy;&icy;&scy;&softcy; &bcy;&ycy;&tcy;&softcy; &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy;?
-      </p>
-     </div>
-     <div class="story-body">
-      <p class="eyebrow green">
-       &Tcy;&Ocy;&Kcy;&IEcy;&Ncy;&Icy;&Zcy;&Acy;&TScy;&Icy;&YAcy;
-      </p>
-      <h2>
-       &Ocy;&dcy;&icy;&ncy; &tcy;&ocy;&kcy;&iecy;&ncy;.
-       <br/>
-       <em>
-        &Scy;&vcy;&ocy;&yacy; &icy;&scy;&tcy;&ocy;&rcy;&icy;&yacy;.
-       </em>
-      </h2>
-      <p class="chapter-lead">
-       NFT (
-       <i>
-        non-fungible token
-       </i>
-       ) &mdash; &ncy;&iecy;&vcy;&zcy;&acy;&icy;&mcy;&ocy;&zcy;&acy;&mcy;&iecy;&ncy;&yacy;&iecy;&mcy;&ycy;&jcy; &tcy;&ocy;&kcy;&iecy;&ncy;. &IEcy;&gcy;&ocy; &ocy;&tcy;&lcy;&icy;&chcy;&icy;&iecy; &ncy;&iecy; &vcy; &kcy;&rcy;&acy;&scy;&ocy;&tcy;&iecy; &icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&yacy;, &acy; &vcy; &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ocy;&mcy; &icy;&dcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tcy;&ocy;&rcy;&iecy; &icy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy; &ocy;&tcy;&scy;&lcy;&iecy;&zhcy;&icy;&vcy;&acy;&tcy;&softcy; &ocy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&ucy;&yucy; &zcy;&acy;&pcy;&icy;&scy;&softcy; &vcy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;&iecy;.
-      </p>
-      <p>
-       &Ocy;&bcy;&ycy;&chcy;&ncy;&ycy;&iecy; &vcy;&zcy;&acy;&icy;&mcy;&ocy;&zcy;&acy;&mcy;&iecy;&ncy;&yacy;&iecy;&mcy;&ycy;&iecy; &iecy;&dcy;&icy;&ncy;&icy;&tscy;&ycy; &ocy;&dcy;&ncy;&ocy;&gcy;&ocy; &tcy;&icy;&pcy;&acy; &ecy;&kcy;&vcy;&icy;&vcy;&acy;&lcy;&iecy;&ncy;&tcy;&ncy;&ycy; &dcy;&rcy;&ucy;&gcy; &dcy;&rcy;&ucy;&gcy;&ucy;: &ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy;, &ocy;&dcy;&icy;&ncy; &ucy;&scy;&lcy;&ocy;&vcy;&ncy;&ycy;&jcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&jcy; &bcy;&acy;&lcy;&lcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &zcy;&acy;&mcy;&iecy;&ncy;&yacy;&tcy;&softcy;&scy;&yacy; &dcy;&rcy;&ucy;&gcy;&icy;&mcy;. NFT, &ncy;&acy;&pcy;&rcy;&ocy;&tcy;&icy;&vcy;, &pcy;&rcy;&iecy;&dcy;&scy;&tcy;&acy;&vcy;&lcy;&yacy;&iecy;&tcy; &icy;&ncy;&dcy;&icy;&vcy;&icy;&dcy;&ucy;&acy;&lcy;&softcy;&ncy;&ycy;&jcy; &ecy;&kcy;&zcy;&iecy;&mcy;&pcy;&lcy;&yacy;&rcy;. &Ucy; &ncy;&iecy;&gcy;&ocy; &iecy;&scy;&tcy;&softcy; &scy;&ocy;&bcy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ycy;&jcy; &icy;&dcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tcy;&ocy;&rcy;, &acy;&dcy;&rcy;&iecy;&scy; &scy;&mcy;&acy;&rcy;&tcy;-&kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy;&acy; &icy; &scy;&vcy;&yacy;&zcy;&acy;&ncy;&ncy;&ycy;&iecy; &mcy;&iecy;&tcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&iecy;. &Vcy; &ecy;&kcy;&ocy;&scy;&icy;&scy;&tcy;&iecy;&mcy;&iecy; Ethereum &tcy;&acy;&kcy;&ucy;&yucy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&icy;&zcy;&icy;&rcy;&ucy;&iecy;&tcy;
+</div>
+<div class="story-body">
+<p class="eyebrow green">ТОКЕНИЗАЦИЯ ЦИФРОВЫХ ОБЪЕКТОВ</p>
+<h2>Невзаимозаменяемые токены (NFT)</h2>
+<p class="chapter-lead">NFT (non-fungible token) — невзаимозаменяемый токен, который имеет уникальный идентификатор и связан с метаданными цифрового объекта. Записи о токене и операциях с ним могут проверяться в блокчейне.</p>
+<p>
+       Обычные взаимозаменяемые единицы одного типа эквивалентны друг другу: например, один условный цифровой балл может заменяться другим. NFT, напротив, представляет индивидуальный экземпляр. У него есть собственный идентификатор, адрес смарт-контракта и связанные метаданные. В экосистеме Ethereum такую модель стандартизирует
        <a href="https://ercs.ethereum.org/ERCS/erc-721" rel="noopener noreferrer" target="_blank">
         ERC-721
        </a>
-       ; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;
+       ; стандарт
        <a href="https://ethereum.org/developers/docs/standards/tokens" rel="noopener noreferrer" target="_blank">
         ERC-1155
        </a>
-       &pcy;&ocy;&zcy;&vcy;&ocy;&lcy;&yacy;&iecy;&tcy; &rcy;&acy;&bcy;&ocy;&tcy;&acy;&tcy;&softcy; &scy; &ncy;&iecy;&scy;&kcy;&ocy;&lcy;&softcy;&kcy;&icy;&mcy;&icy; &tcy;&icy;&pcy;&acy;&mcy;&icy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&khcy; &iecy;&dcy;&icy;&ncy;&icy;&tscy; &vcy; &ocy;&dcy;&ncy;&ocy;&mcy; &kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy;&iecy;.
+       позволяет работать с несколькими типами цифровых единиц в одном контракте.
       </p>
-      <div class="interaction-block" id="token-compare">
-       <div class="interaction-heading">
-        <div>
-         <span class="mini-label">
-          &Icy;&Ncy;&Tcy;&IEcy;&Rcy;&Acy;&Kcy;&Tcy;&Icy;&Vcy;&Ncy;&Acy;&YAcy; &Scy;&KHcy;&IEcy;&Mcy;&Acy;
-         </span>
-         <h3>
-          &Vcy; &chcy;&iocy;&mcy; &rcy;&acy;&zcy;&ncy;&icy;&tscy;&acy;?
-         </h3>
-        </div>
-        <div aria-label="&Vcy;&icy;&dcy;&ycy; &tcy;&ocy;&kcy;&iecy;&ncy;&ocy;&vcy;" class="tabs" role="tablist">
-         <button aria-controls="panel-token" aria-selected="false" data-token="fungible" id="tab-fungible" role="tab" type="button">
-          &Vcy;&zcy;&acy;&icy;&mcy;&ocy;&zcy;&acy;&mcy;&iecy;&ncy;&yacy;&iecy;&mcy;&ycy;&jcy;
+<div class="interaction-block" id="token-compare">
+<div class="interaction-heading">
+<div>
+<span class="mini-label">ИНТЕРАКТИВНОЕ СРАВНЕНИЕ</span>
+<h3>Сравнение взаимозаменяемых токенов и NFT</h3>
+</div>
+<div aria-label="Виды токенов" class="tabs" role="tablist">
+<button aria-controls="panel-token" aria-selected="false" data-token="fungible" id="tab-fungible" role="tab" type="button">
+          Взаимозаменяемый
          </button>
-         <button aria-controls="panel-token" aria-selected="true" data-token="nft" id="tab-nft" role="tab" type="button">
+<button aria-controls="panel-token" aria-selected="true" data-token="nft" id="tab-nft" role="tab" type="button">
           NFT
          </button>
-        </div>
-       </div>
-       <div aria-labelledby="tab-nft" class="token-display" id="panel-token" role="tabpanel">
-        <div class="token-coins" id="token-coins">
-         <span>
+</div>
+</div>
+<div aria-labelledby="tab-nft" class="token-display" id="panel-token" role="tabpanel">
+<div class="token-coins" id="token-coins">
+<span>
           01
          </span>
-         <span>
+<span>
           02
          </span>
-         <span>
+<span>
           03
          </span>
-        </div>
-        <div class="token-explain">
-         <strong id="token-title">
-          &Tcy;&rcy;&icy; &rcy;&acy;&zcy;&ncy;&ycy;&khcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&khcy; &ocy;&bcy;&hardcy;&iecy;&kcy;&tcy;&acy;
+</div>
+<div class="token-explain">
+<strong id="token-title">
+          Три разных цифровых объекта
          </strong>
-         <p id="token-description">
-          &Kcy;&acy;&zhcy;&dcy;&ycy;&jcy; &tcy;&ocy;&kcy;&iecy;&ncy; &icy;&mcy;&iecy;&iecy;&tcy; &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ycy;&jcy; &icy;&dcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tcy;&ocy;&rcy;. &Tcy;&ocy;&kcy;&iecy;&ncy; &numero;01 &ncy;&iecy; &rcy;&acy;&vcy;&ncy;&ocy;&zcy;&ncy;&acy;&chcy;&iecy;&ncy; &tcy;&ocy;&kcy;&iecy;&ncy;&ucy; &numero;02: &zcy;&acy; &ncy;&icy;&mcy;&icy; &mcy;&ocy;&gcy;&ucy;&tcy; &scy;&tcy;&ocy;&yacy;&tcy;&softcy; &rcy;&acy;&zcy;&ncy;&ycy;&iecy; &mcy;&iecy;&tcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&iecy; &icy; &pcy;&rcy;&acy;&vcy;&acy;.
+<p id="token-description">
+          Каждый токен имеет уникальный идентификатор. Токен №01 не равнозначен токену №02: за ними могут стоять разные метаданные и права.
          </p>
-        </div>
-       </div>
-      </div>
-      <p>
-       &Pcy;&rcy;&icy; &vcy;&ycy;&pcy;&ucy;&scy;&kcy;&iecy; NFT &vcy; &rcy;&iecy;&iecy;&scy;&tcy;&rcy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy; &zcy;&acy;&ncy;&ocy;&scy;&yacy;&tcy;&scy;&yacy; &dcy;&acy;&ncy;&ncy;&ycy;&iecy; &tcy;&ocy;&kcy;&iecy;&ncy;&acy; &icy; &scy;&scy;&ycy;&lcy;&kcy;&acy; &ncy;&acy; &mcy;&iecy;&tcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&iecy;. &Icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&iecy;, &vcy;&icy;&dcy;&iecy;&ocy; &icy;&lcy;&icy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy; &pcy;&rcy;&icy; &ecy;&tcy;&ocy;&mcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy;&scy;&yacy; &vcy; &dcy;&rcy;&ucy;&gcy;&ocy;&mcy; &mcy;&iecy;&scy;&tcy;&iecy; &mdash; &ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy;, &ncy;&acy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy;&mcy; &scy;&iecy;&rcy;&vcy;&iecy;&rcy;&iecy; &icy;&lcy;&icy; &vcy; &rcy;&acy;&scy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&ocy;&mcy; &khcy;&rcy;&acy;&ncy;&icy;&lcy;&icy;&shchcy;&iecy;. &Pcy;&ocy;&ecy;&tcy;&ocy;&mcy;&ucy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&ncy;&ocy;&scy;&tcy;&softcy; &scy;&acy;&mcy;&ocy;&gcy;&ocy; &fcy;&acy;&jcy;&lcy;&acy; &icy; &scy;&ocy;&khcy;&rcy;&acy;&ncy;&ncy;&ocy;&scy;&tcy;&softcy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;-&zcy;&acy;&pcy;&icy;&scy;&icy; &ncy;&ucy;&zhcy;&ncy;&ocy; &rcy;&acy;&scy;&scy;&mcy;&acy;&tcy;&rcy;&icy;&vcy;&acy;&tcy;&softcy; &ocy;&tcy;&dcy;&iecy;&lcy;&softcy;&ncy;&ocy;.
+</div>
+</div>
+</div>
+<p>
+       При выпуске NFT в реестр обычно заносятся данные токена и ссылка на метаданные. Изображение, видео или документ при этом может храниться в другом месте — например, на обычном сервере или в распределённом хранилище. Поэтому доступность самого файла и сохранность блокчейн-записи нужно рассматривать отдельно.
       </p>
-      <div class="notice">
-       <div>
-        <strong>
-         NFT &ne; &acy;&vcy;&tcy;&ocy;&rcy;&scy;&kcy;&ocy;&iecy; &pcy;&rcy;&acy;&vcy;&ocy;
-        </strong>
-        <p>
-         &Kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&softcy; &ncy;&acy;&dcy; &tcy;&ocy;&kcy;&iecy;&ncy;&ocy;&mcy; &scy;&acy;&mcy; &pcy;&ocy; &scy;&iecy;&bcy;&iecy; &ncy;&iecy; &ocy;&zcy;&ncy;&acy;&chcy;&acy;&iecy;&tcy; &acy;&vcy;&tcy;&ocy;&mcy;&acy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&ocy;&iecy; &pcy;&rcy;&icy;&ocy;&bcy;&rcy;&iecy;&tcy;&iecy;&ncy;&icy;&iecy; &icy;&scy;&kcy;&lcy;&yucy;&chcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &pcy;&rcy;&acy;&vcy; &ncy;&acy; &scy;&vcy;&yacy;&zcy;&acy;&ncy;&ncy;&ocy;&iecy; &pcy;&rcy;&ocy;&icy;&zcy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy;. &Pcy;&rcy;&acy;&vcy;&ocy;&vcy;&ocy;&jcy; &rcy;&iecy;&zhcy;&icy;&mcy; &zcy;&acy;&vcy;&icy;&scy;&icy;&tcy; &ocy;&tcy; &dcy;&ocy;&gcy;&ocy;&vcy;&ocy;&rcy;&acy;, &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&dcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy; &icy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&jcy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;. &Ecy;&tcy;&ocy;&tcy; &vcy;&ocy;&pcy;&rcy;&ocy;&scy; &ocy;&tcy;&dcy;&iecy;&lcy;&softcy;&ncy;&ocy; &rcy;&acy;&scy;&scy;&mcy;&acy;&tcy;&rcy;&icy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &vcy; &rcy;&acy;&bcy;&ocy;&tcy;&iecy; &Scy;&ocy;&kcy;&ocy;&lcy;&ocy;&vcy;&ocy;&jcy; &IEcy;. &Scy;. &icy; &Fcy;&icy;&lcy;&icy;&mcy;&ocy;&ncy;&ocy;&vcy;&ocy;&jcy; &Acy;. &Icy;.
+<div class="notice">
+<div>
+<strong>Правовой статус NFT</strong>
+<p>
+         Контроль над токеном сам по себе не означает автоматическое приобретение исключительных прав на связанное произведение. Правовой режим зависит от договора, законодательства и условий использования. Этот вопрос отдельно рассматривается в работе Соколовой Е. С. и Филимоновой А. И.
          <a href="https://cyberleninka.ru/article/n/finansovo-pravovoe-regulirovanie-nft-neobhodimost-i-dostatochnost" rel="noopener noreferrer" target="_blank">
-          &CHcy;&icy;&tcy;&acy;&tcy;&softcy; &icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;
+          Читать исследование
          </a>
-        </p>
-       </div>
-      </div>
-      <h3>
-       &Gcy;&dcy;&iecy; NFT &pcy;&ocy;&lcy;&iecy;&zcy;&ncy;&iecy;&iecy; &vcy;&scy;&iecy;&gcy;&ocy;?
-      </h3>
-      <p>
-       &Pcy;&rcy;&acy;&kcy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&acy;&yacy; &tscy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&softcy; &pcy;&ocy;&yacy;&vcy;&lcy;&yacy;&iecy;&tcy;&scy;&yacy; &tcy;&acy;&mcy;, &gcy;&dcy;&iecy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy; &pcy;&ocy;&dcy;&tcy;&vcy;&iecy;&rcy;&zhcy;&dcy;&acy;&tcy;&softcy;
+</p>
+</div>
+</div>
+<h3>Области применения NFT</h3>
+<p>
+       Практическая ценность появляется там, где необходимо подтверждать
        <strong>
-        &icy;&ncy;&dcy;&icy;&vcy;&icy;&dcy;&ucy;&acy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy;, &scy;&tcy;&acy;&tcy;&ucy;&scy; &icy;&lcy;&icy; &icy;&scy;&tcy;&ocy;&rcy;&icy;&yucy; &ocy;&bcy;&hardcy;&iecy;&kcy;&tcy;&acy;
+        индивидуальность, статус или историю объекта
        </strong>
-       . &Ecy;&tcy;&ocy; &mcy;&ocy;&gcy;&ucy;&tcy; &bcy;&ycy;&tcy;&softcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &pcy;&rcy;&ocy;&pcy;&ucy;&scy;&kcy;&acy;, &icy;&gcy;&rcy;&ocy;&vcy;&ycy;&iecy; &pcy;&rcy;&iecy;&dcy;&mcy;&iecy;&tcy;&ycy;, &ucy;&chcy;&iocy;&tcy; &lcy;&icy;&tscy;&iecy;&ncy;&zcy;&icy;&jcy;, &bcy;&icy;&lcy;&iecy;&tcy;&ycy; &icy;&lcy;&icy; &scy;&iecy;&rcy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tcy;&ycy; &ocy;&bcy;&ucy;&chcy;&iecy;&ncy;&icy;&yacy;. &Ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy;, &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &mcy;&ocy;&zhcy;&iecy;&tcy; &vcy;&ycy;&dcy;&acy;&tcy;&softcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;, &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&ucy;&yucy;&shchcy;&icy;&jcy; &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &zcy;&acy;&pcy;&icy;&scy;&icy;, &acy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&yucy;&shchcy;&acy;&yacy; &scy;&tcy;&ocy;&rcy;&ocy;&ncy;&acy; &mdash; &ucy;&dcy;&ocy;&scy;&tcy;&ocy;&vcy;&iecy;&rcy;&icy;&tcy;&softcy;&scy;&yacy;, &kcy;&acy;&kcy;&icy;&mcy; &ecy;&mcy;&icy;&tcy;&iecy;&ncy;&tcy;&ocy;&mcy; &ocy;&ncy; &bcy;&ycy;&lcy; &vcy;&ycy;&pcy;&ucy;&shchcy;&iecy;&ncy;.
+       . Это могут быть цифровые пропуска, игровые предметы, учёт лицензий, билеты или сертификаты обучения. Например, организация может выдать документ, соответствующий уникальной записи, а проверяющая сторона — удостовериться, каким эмитентом он был выпущен.
       </p>
-      <p>
-       &Ncy;&ocy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy; &ncy;&iecy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&tcy;, &icy;&mcy;&iecy;&lcy; &lcy;&icy; &ecy;&mcy;&icy;&tcy;&iecy;&ncy;&tcy; &pcy;&rcy;&acy;&vcy;&ocy; &vcy;&ycy;&dcy;&acy;&vcy;&acy;&tcy;&softcy; &scy;&iecy;&rcy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tcy;. &Tcy;&acy;&kcy;&zhcy;&iecy; &ncy;&ucy;&zhcy;&ncy;&ocy; &pcy;&rcy;&iecy;&dcy;&ucy;&scy;&mcy;&ocy;&tcy;&rcy;&iecy;&tcy;&softcy; &icy;&scy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &ocy;&shcy;&icy;&bcy;&ocy;&kcy;, &ocy;&tcy;&zcy;&ycy;&vcy; &ncy;&iecy;&dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy;, &zcy;&acy;&shchcy;&icy;&tcy;&ucy; &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&icy; &icy; &vcy;&ocy;&scy;&scy;&tcy;&acy;&ncy;&ocy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy; &pcy;&rcy;&icy; &ucy;&tcy;&rcy;&acy;&tcy;&iecy; &kcy;&lcy;&yucy;&chcy;&iecy;&jcy;. &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&icy;
+<p>
+       Но блокчейн не проверяет, имел ли эмитент право выдавать сертификат. Также нужно предусмотреть исправление ошибок, отзыв недействительных документов, защиту персональной информации и восстановление доступа при утрате ключей. Исследователи
        <a href="https://cyberleninka.ru/article/n/nevzaimozamenyaemyy-token-perspektivnyy-tsifrovoy-instrument-dlya-biznesa" rel="noopener noreferrer" target="_blank">
-        &Ncy;. &Acy;. &Kcy;&acy;&shcy;&iecy;&vcy;&acy;&rcy;&ocy;&vcy;&acy; &icy; &Icy;. &Scy;. &Scy;&tcy;&acy;&rcy;&icy;&kcy;&ocy;&vcy;&acy;
+        Н. А. Кашеварова и И. С. Старикова
        </a>
-       &rcy;&acy;&scy;&scy;&mcy;&acy;&tcy;&rcy;&icy;&vcy;&acy;&yucy;&tcy; NFT &kcy;&acy;&kcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&jcy; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy; &dcy;&lcy;&yacy; &bcy;&icy;&zcy;&ncy;&iecy;&scy;&acy;, &ncy;&ocy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&ocy;&ncy;&ncy;&ycy;&iecy; &icy; &yucy;&rcy;&icy;&dcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &vcy;&ocy;&pcy;&rcy;&ocy;&scy;&ycy; &ocy;&scy;&tcy;&acy;&yucy;&tcy;&scy;&yacy; &ncy;&iecy;&ocy;&tcy;&hardcy;&iecy;&mcy;&lcy;&iecy;&mcy;&ocy;&jcy; &chcy;&acy;&scy;&tcy;&softcy;&yucy; &vcy;&ncy;&iecy;&dcy;&rcy;&iecy;&ncy;&icy;&yacy;.
+       рассматривают NFT как цифровой инструмент для бизнеса, но организационные и юридические вопросы остаются неотъемлемой частью внедрения.
       </p>
-     </div>
-    </div>
-   </section>
-   <section class="dark-feature section-pad" id="lifecycle">
-    <div class="container">
-     <div class="feature-title">
-      <span class="section-index">
-       03 / &Kcy;&Acy;&Kcy; &Ecy;&Tcy;&Ocy; &Ucy;&Scy;&Tcy;&Rcy;&Ocy;&IEcy;&Ncy;&Ocy;
+</div>
+</div>
+</section>
+<section class="dark-feature section-pad" id="lifecycle">
+<div class="container">
+<div class="feature-title">
+<span class="section-index">
+       03 / КАК ЭТО УСТРОЕНО
       </span>
-      <h2>
-       &Pcy;&ucy;&tcy;&iecy;&shcy;&iecy;&scy;&tcy;&vcy;&icy;&iecy;
-       <br/>
-       <em>
-        &ocy;&dcy;&ncy;&ocy;&gcy;&ocy; NFT.
-       </em>
-      </h2>
-      <p>
-       &Ncy;&acy;&zhcy;&icy;&mcy;&acy;&jcy;&tcy;&iecy; &ncy;&acy; &shcy;&acy;&gcy;&icy; &mdash; &icy;&ncy;&tcy;&iecy;&rcy;&acy;&kcy;&tcy;&icy;&vcy;&ncy;&acy;&yacy; &scy;&khcy;&iecy;&mcy;&acy; &pcy;&ocy;&kcy;&acy;&zhcy;&iecy;&tcy;, &chcy;&tcy;&ocy; &pcy;&rcy;&ocy;&icy;&scy;&khcy;&ocy;&dcy;&icy;&tcy; &ncy;&acy; &kcy;&acy;&zhcy;&dcy;&ocy;&mcy; &ecy;&tcy;&acy;&pcy;&iecy;.
-      </p>
-     </div>
-     <div class="steps-grid">
-      <div aria-label="&Ecy;&tcy;&acy;&pcy;&ycy; &zhcy;&icy;&zcy;&ncy;&iecy;&ncy;&ncy;&ocy;&gcy;&ocy; &tscy;&icy;&kcy;&lcy;&acy; NFT" class="step-buttons" role="group">
-       <button class="step-button active" data-step="0" type="button">
-        <span>
+<h2>Жизненный цикл NFT</h2>
+<p>Последовательность этапов создания, выпуска, хранения и передачи NFT приведена на интерактивной схеме.</p>
+</div>
+<div class="steps-grid">
+<div aria-label="Этапы жизненного цикла NFT" class="step-buttons" role="group">
+<button class="step-button active" data-step="0" type="button">
+<span>
          01
         </span>
-        <strong>
-         &Scy;&ocy;&zcy;&dcy;&acy;&ncy;&icy;&iecy;
+<strong>
+         Создание
         </strong>
-       </button>
-       <button class="step-button" data-step="1" type="button">
-        <span>
+</button>
+<button class="step-button" data-step="1" type="button">
+<span>
          02
         </span>
-        <strong>
-         &Vcy;&ycy;&pcy;&ucy;&scy;&kcy;
+<strong>
+         Выпуск
         </strong>
-       </button>
-       <button class="step-button" data-step="2" type="button">
-        <span>
+</button>
+<button class="step-button" data-step="2" type="button">
+<span>
          03
         </span>
-        <strong>
-         &KHcy;&rcy;&acy;&ncy;&iecy;&ncy;&icy;&iecy;
+<strong>
+         Хранение
         </strong>
-       </button>
-       <button class="step-button" data-step="3" type="button">
-        <span>
+</button>
+<button class="step-button" data-step="3" type="button">
+<span>
          04
         </span>
-        <strong>
-         &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&kcy;&acy; &icy; &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&chcy;&acy;
+<strong>
+         Проверка и передача
         </strong>
-       </button>
-      </div>
-      <div class="step-preview">
-       <div class="step-visual">
-        <img alt="&Scy;&khcy;&iecy;&mcy;&acy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&ocy;&iecy; &icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&iecy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&gcy;&ocy; &tcy;&ocy;&kcy;&iecy;&ncy;&acy;, &scy;&vcy;&yacy;&zcy;&acy;&ncy;&ncy;&ocy;&gcy;&ocy; &scy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;&ocy;&mcy; &icy; &mcy;&iecy;&tcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&mcy;&icy;" src="assets/token-journey.svg"/>
-       </div>
-       <span class="mini-label">
-        &Ecy;&Tcy;&Acy;&Pcy;
+</button>
+</div>
+<div class="step-preview">
+<div class="step-visual">
+<img alt="Схематическое изображение цифрового токена, связанного с блокчейном и метаданными" src="assets/token-journey.svg"/>
+</div>
+<span class="mini-label">
+        ЭТАП
         <span id="step-count">
          01
         </span>
         / 04
        </span>
-       <h3 id="step-title">
-        &Scy;&ocy;&zcy;&dcy;&acy;&iocy;&tcy;&scy;&yacy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&jcy; &ocy;&bcy;&hardcy;&iecy;&kcy;&tcy;
+<h3 id="step-title">
+        Создаётся цифровой объект
        </h3>
-       <p id="step-text">
-        &Acy;&vcy;&tcy;&ocy;&rcy; &icy;&lcy;&icy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &gcy;&ocy;&tcy;&ocy;&vcy;&icy;&tcy; &ocy;&bcy;&hardcy;&iecy;&kcy;&tcy; &icy; &iecy;&gcy;&ocy; &mcy;&iecy;&tcy;&acy;&dcy;&acy;&ncy;&ncy;&ycy;&iecy;: &ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy;, &ocy;&pcy;&icy;&scy;&acy;&ncy;&icy;&iecy;, &scy;&scy;&ycy;&lcy;&kcy;&ucy; &ncy;&acy; &scy;&ocy;&dcy;&iecy;&rcy;&zhcy;&icy;&mcy;&ocy;&iecy; &icy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ucy;&yucy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&yucy; &ocy;&bcy; &ecy;&mcy;&icy;&tcy;&iecy;&ncy;&tcy;&iecy;. &Icy;&scy;&tcy;&icy;&ncy;&ncy;&ocy;&scy;&tcy;&softcy; &ecy;&tcy;&icy;&khcy; &scy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&jcy; &dcy;&ocy;&lcy;&zhcy;&ncy;&acy; &bcy;&ycy;&tcy;&softcy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&iecy;&ncy;&acy; &vcy;&ncy;&iecy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy;&acy;.
+<p id="step-text">
+        Автор или организация готовит объект и его метаданные: название, описание, ссылку на содержимое и необходимую информацию об эмитенте. Истинность этих сведений должна быть проверена вне блокчейна.
        </p>
+</div>
+</div>
+<div class="feature-footnote">
+      Техническая схема упрощена для объяснения процесса. Разные платформы могут реализовывать этапы по-разному.
+     </div>
+</div>
+</section>
+<section class="story-section section-pad" id="remote">
+<div class="container content-grid">
+<div class="sticky-aside">
+<div class="section-index">
+       04 / УДАЛЁННАЯ РАБОТА
       </div>
-     </div>
-     <div class="feature-footnote">
-      &Tcy;&iecy;&khcy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&acy;&yacy; &scy;&khcy;&iecy;&mcy;&acy; &ucy;&pcy;&rcy;&ocy;&shchcy;&iecy;&ncy;&acy; &dcy;&lcy;&yacy; &ocy;&bcy;&hardcy;&yacy;&scy;&ncy;&iecy;&ncy;&icy;&yacy; &pcy;&rcy;&ocy;&tscy;&iecy;&scy;&scy;&acy;. &Rcy;&acy;&zcy;&ncy;&ycy;&iecy; &pcy;&lcy;&acy;&tcy;&fcy;&ocy;&rcy;&mcy;&ycy; &mcy;&ocy;&gcy;&ucy;&tcy; &rcy;&iecy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;&ycy;&vcy;&acy;&tcy;&softcy; &ecy;&tcy;&acy;&pcy;&ycy; &pcy;&ocy;-&rcy;&acy;&zcy;&ncy;&ocy;&mcy;&ucy;.
-     </div>
-    </div>
-   </section>
-   <section class="story-section section-pad" id="remote">
-    <div class="container content-grid">
-     <div class="sticky-aside">
-      <div class="section-index">
-       04 / &Ucy;&Dcy;&Acy;&Lcy;&IOcy;&Ncy;&Ncy;&Acy;&YAcy; &Rcy;&Acy;&Bcy;&Ocy;&Tcy;&Acy;
-      </div>
-      <p class="aside-prompt">
-       &Kcy;&acy;&kcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&acy;&yacy; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&acy; &mcy;&iecy;&ncy;&yacy;&iecy;&tcy; &rcy;&acy;&bcy;&ocy;&chcy;&icy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&scy;&scy;&ycy;?
+</div>
+<div class="story-body">
+<p class="eyebrow green">УДАЛЁННАЯ И ГИБРИДНАЯ ЗАНЯТОСТЬ</p>
+<h2>Технологическая основа удалённой работы</h2>
+<p class="chapter-lead">Развитие широкополосного интернета, облачных сервисов, видеосвязи и систем управления задачами обеспечило технологические условия для дистанционной и гибридной занятости.</p>
+<p>
+       Совместная работа больше не всегда требует физического присутствия в одном месте. Распределённые команды используют облачные хранилища, электронный документооборот, мессенджеры и цифровые доски для обсуждения задач и обмена результатами.
       </p>
-     </div>
-     <div class="story-body">
-      <p class="eyebrow green">
-       &Rcy;&Acy;&Bcy;&Ocy;&Tcy;&Acy; &Vcy; &TScy;&Icy;&Fcy;&Rcy;&Ocy;&Vcy;&Ocy;&Jcy; &Scy;&Rcy;&IEcy;&Dcy;&IEcy;
+<p>
+       Однако перенос файлов в облако сам по себе не создаёт эффективную рабочую среду. Важны общие правила хранения данных, организация коммуникации, прозрачность задач и доступность документации. Без них сотрудники сталкиваются с дублированием сообщений, поиском актуальных версий документов и потерей контекста.
       </p>
-      <h2>
-       &Rcy;&acy;&bcy;&ocy;&tcy;&acy; &bcy;&iecy;&zcy;
-       <em>
-        &ocy;&fcy;&icy;&scy;&acy;
-       </em>
-      </h2>
-      <p class="chapter-lead">
-       &SHcy;&icy;&rcy;&ocy;&kcy;&ocy;&pcy;&ocy;&lcy;&ocy;&scy;&ncy;&ycy;&jcy; &icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy;, &vcy;&icy;&dcy;&iecy;&ocy;&scy;&vcy;&yacy;&zcy;&softcy;, &ocy;&bcy;&lcy;&acy;&chcy;&ncy;&ycy;&iecy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy; &icy; &scy;&icy;&scy;&tcy;&iecy;&mcy;&ycy; &ucy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&yacy; &zcy;&acy;&dcy;&acy;&chcy;&acy;&mcy;&icy; &scy;&dcy;&iecy;&lcy;&acy;&lcy;&icy; &rcy;&acy;&bcy;&ocy;&tcy;&ucy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&ncy;&ocy;&jcy; &zcy;&acy; &pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&acy;&mcy;&icy; &kcy;&ocy;&rcy;&pcy;&ocy;&rcy;&acy;&tcy;&icy;&vcy;&ncy;&ocy;&gcy;&ocy; &zcy;&dcy;&acy;&ncy;&icy;&yacy;.
-      </p>
-      <p>
-       &Scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&ncy;&acy;&yacy; &rcy;&acy;&bcy;&ocy;&tcy;&acy; &bcy;&ocy;&lcy;&softcy;&shcy;&iecy; &ncy;&iecy; &vcy;&scy;&iecy;&gcy;&dcy;&acy; &tcy;&rcy;&iecy;&bcy;&ucy;&iecy;&tcy; &fcy;&icy;&zcy;&icy;&chcy;&iecy;&scy;&kcy;&ocy;&gcy;&ocy; &pcy;&rcy;&icy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&yacy; &vcy; &ocy;&dcy;&ncy;&ocy;&mcy; &mcy;&iecy;&scy;&tcy;&iecy;. &Rcy;&acy;&scy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&ycy;&iecy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&ycy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yucy;&tcy; &ocy;&bcy;&lcy;&acy;&chcy;&ncy;&ycy;&iecy; &khcy;&rcy;&acy;&ncy;&icy;&lcy;&icy;&shchcy;&acy;, &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&ocy;&bcy;&ocy;&rcy;&ocy;&tcy;, &mcy;&iecy;&scy;&scy;&iecy;&ncy;&dcy;&zhcy;&iecy;&rcy;&ycy; &icy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &dcy;&ocy;&scy;&kcy;&icy; &dcy;&lcy;&yacy; &ocy;&bcy;&scy;&ucy;&zhcy;&dcy;&iecy;&ncy;&icy;&yacy; &zcy;&acy;&dcy;&acy;&chcy; &icy; &ocy;&bcy;&mcy;&iecy;&ncy;&acy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&acy;&mcy;&icy;.
-      </p>
-      <p>
-       &Ocy;&dcy;&ncy;&acy;&kcy;&ocy; &pcy;&iecy;&rcy;&iecy;&ncy;&ocy;&scy; &fcy;&acy;&jcy;&lcy;&ocy;&vcy; &vcy; &ocy;&bcy;&lcy;&acy;&kcy;&ocy; &scy;&acy;&mcy; &pcy;&ocy; &scy;&iecy;&bcy;&iecy; &ncy;&iecy; &scy;&ocy;&zcy;&dcy;&acy;&iocy;&tcy; &ecy;&fcy;&fcy;&iecy;&kcy;&tcy;&icy;&vcy;&ncy;&ucy;&yucy; &rcy;&acy;&bcy;&ocy;&chcy;&ucy;&yucy; &scy;&rcy;&iecy;&dcy;&ucy;. &Vcy;&acy;&zhcy;&ncy;&ycy; &ocy;&bcy;&shchcy;&icy;&iecy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &khcy;&rcy;&acy;&ncy;&iecy;&ncy;&icy;&yacy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;, &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &kcy;&ocy;&mcy;&mcy;&ucy;&ncy;&icy;&kcy;&acy;&tscy;&icy;&icy;, &pcy;&rcy;&ocy;&zcy;&rcy;&acy;&chcy;&ncy;&ocy;&scy;&tcy;&softcy; &zcy;&acy;&dcy;&acy;&chcy; &icy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&ncy;&ocy;&scy;&tcy;&softcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&tscy;&icy;&icy;. &Bcy;&iecy;&zcy; &ncy;&icy;&khcy; &scy;&ocy;&tcy;&rcy;&ucy;&dcy;&ncy;&icy;&kcy;&icy; &scy;&tcy;&acy;&lcy;&kcy;&icy;&vcy;&acy;&yucy;&tcy;&scy;&yacy; &scy; &dcy;&ucy;&bcy;&lcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&mcy; &scy;&ocy;&ocy;&bcy;&shchcy;&iecy;&ncy;&icy;&jcy;, &pcy;&ocy;&icy;&scy;&kcy;&ocy;&mcy; &acy;&kcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &vcy;&iecy;&rcy;&scy;&icy;&jcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &icy; &pcy;&ocy;&tcy;&iecy;&rcy;&iecy;&jcy; &kcy;&ocy;&ncy;&tcy;&iecy;&kcy;&scy;&tcy;&acy;.
-      </p>
-      <p>
-       &Ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ycy;&jcy; &fcy;&ocy;&rcy;&mcy;&acy;&tcy; &rcy;&acy;&scy;&shcy;&icy;&rcy;&yacy;&iecy;&tcy; &gcy;&iecy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yucy; &ncy;&acy;&jcy;&mcy;&acy; &icy; &scy;&ocy;&kcy;&rcy;&acy;&shchcy;&acy;&iecy;&tcy; &vcy;&rcy;&iecy;&mcy;&yacy; &pcy;&ocy;&iecy;&zcy;&dcy;&ocy;&kcy;, &ncy;&ocy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&iecy;&ncy; &rcy;&acy;&zcy;&mcy;&ycy;&vcy;&acy;&tcy;&softcy; &gcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &mcy;&iecy;&zhcy;&dcy;&ucy; &rcy;&acy;&bcy;&ocy;&chcy;&icy;&mcy; &icy; &lcy;&icy;&chcy;&ncy;&ycy;&mcy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&iecy;&mcy;. &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&ocy;&jcy; &zcy;&acy;&ncy;&yacy;&tcy;&ocy;&scy;&tcy;&icy; &pcy;&ocy;&dcy;&chcy;&iocy;&rcy;&kcy;&icy;&vcy;&acy;&yucy;&tcy; &zcy;&ncy;&acy;&chcy;&icy;&mcy;&ocy;&scy;&tcy;&softcy; &ucy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy; &icy; &scy;&ocy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &scy;&vcy;&yacy;&zcy;&iecy;&jcy; &vcy;&ncy;&ucy;&tcy;&rcy;&icy; &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tcy;&icy;&vcy;&acy;.
+<p>
+       Удалённый формат расширяет географию найма и сокращает время поездок, но способен размывать границы между рабочим и личным временем. Исследования гибридной занятости подчёркивают значимость управленческих правил и социальных связей внутри коллектива.
        <a href="https://cyberleninka.ru/article/n/trud-v-usloviyah-udalennoy-i-gibridnoy-zanyatosti-na-primere-rabotnikov-it-kompaniy" rel="noopener noreferrer" target="_blank">
-        &Pcy;&ocy;&dcy;&rcy;&ocy;&bcy;&ncy;&iecy;&iecy; &ocy;&bcy; &ocy;&scy;&ocy;&bcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&yacy;&khcy; &gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&ocy;&jcy; &zcy;&acy;&ncy;&yacy;&tcy;&ocy;&scy;&tcy;&icy;
+        Подробнее об особенностях гибридной занятости
        </a>
        .
       </p>
-      <p>
-       &Vcy; &Rcy;&ocy;&scy;&scy;&icy;&icy; &dcy;&icy;&scy;&tcy;&acy;&ncy;&tscy;&icy;&ocy;&ncy;&ncy;&ycy;&jcy; &tcy;&rcy;&ucy;&dcy; &rcy;&iecy;&gcy;&ucy;&lcy;&icy;&rcy;&ucy;&iecy;&tcy;&scy;&yacy; &pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy;&mcy;&icy; &Tcy;&rcy;&ucy;&dcy;&ocy;&vcy;&ocy;&gcy;&ocy; &kcy;&ocy;&dcy;&iecy;&kcy;&scy;&acy;, &ocy;&bcy;&ncy;&ocy;&vcy;&lcy;&iocy;&ncy;&ncy;&ycy;&mcy;&icy;
+<p>
+       В России дистанционный труд регулируется положениями Трудового кодекса, обновлёнными
        <a href="https://www.consultant.ru/document/cons_doc_LAW_370070/" rel="noopener noreferrer" target="_blank">
-        &Fcy;&iecy;&dcy;&iecy;&rcy;&acy;&lcy;&softcy;&ncy;&ycy;&mcy; &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&mcy; &numero; 407-&Fcy;&Zcy;
+        Федеральным законом № 407-ФЗ
        </a>
-       . &Tcy;&iecy;&khcy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy; &pcy;&rcy;&icy; &ecy;&tcy;&ocy;&mcy; &dcy;&ocy;&lcy;&zhcy;&ncy;&ycy; &dcy;&ocy;&pcy;&ocy;&lcy;&ncy;&yacy;&tcy;&softcy;&scy;&yacy; &pcy;&ocy;&ncy;&yacy;&tcy;&ncy;&ycy;&mcy;&icy; &scy;&ocy;&gcy;&lcy;&acy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;&icy;, &rcy;&acy;&scy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iecy;&ncy;&icy;&iecy;&mcy; &ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&icy; &icy; &zcy;&acy;&shchcy;&icy;&tcy;&ocy;&jcy; &kcy;&ocy;&rcy;&pcy;&ocy;&rcy;&acy;&tcy;&icy;&vcy;&ncy;&ocy;&jcy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&icy;.
+       . Технические возможности при этом должны дополняться понятными соглашениями, распределением ответственности и защитой корпоративной информации.
       </p>
-     </div>
-    </div>
-   </section>
-   <section class="story-section section-pad" id="future">
-    <div class="container content-grid">
-     <div class="sticky-aside">
-      <div class="section-index">
-       05 / &Rcy;&Acy;&Bcy;&Ocy;&CHcy;&Acy;&YAcy; &Scy;&Rcy;&IEcy;&Dcy;&Acy;
+</div>
+</div>
+</section>
+<section class="story-section section-pad" id="future">
+<div class="container content-grid">
+<div class="sticky-aside">
+<div class="section-index">
+       05 / РАБОЧАЯ СРЕДА
       </div>
-      <p class="aside-prompt">
-       &CHcy;&tcy;&ocy; &dcy;&iecy;&lcy;&acy;&iecy;&tcy; &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ucy;&yucy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&ucy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &ecy;&fcy;&fcy;&iecy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy;&jcy;?
+</div>
+<div class="story-body">
+<p class="eyebrow green">ИНФРАСТРУКТУРА И БЕЗОПАСНОСТЬ</p>
+<h2>Цифровые инструменты и организация работы</h2>
+<p class="chapter-lead">Цифровая инфраструктура удалённой работы включает пользовательские устройства и сети, прикладные сервисы, средства управления доступом и организационные регламенты.</p>
+<p>
+       На первом уровне находятся ноутбуки, смартфоны и каналы связи. На втором — инструменты видеоконференций, совместного редактирования документов, облачные хранилища и трекеры задач. Третий уровень обеспечивает идентификацию пользователей, права, электронный документооборот и защиту информации. Четвёртый определяет, как команда фиксирует решения, передаёт знания и оценивает результаты.
       </p>
-     </div>
-     <div class="story-body">
-      <p class="eyebrow green">
-       &Tcy;&IEcy;&KHcy;&Ncy;&Ocy;&Lcy;&Ocy;&Gcy;&Icy;&Icy; &Icy; &Ocy;&Rcy;&Gcy;&Acy;&Ncy;&Icy;&Zcy;&Acy;&TScy;&Icy;&YAcy;
-      </p>
-      <h2>
-       &Kcy;&ocy;&mcy;&acy;&ncy;&dcy;&acy; &zhcy;&icy;&vcy;&iocy;&tcy;
-       <br/>
-       <em>
-        &vcy; &scy;&vcy;&yacy;&zcy;&yacy;&khcy;.
-       </em>
-      </h2>
-      <p class="chapter-lead">
-       &Scy;&ocy;&vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&ncy;&ocy;&iecy; &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ocy;&iecy; &rcy;&acy;&bcy;&ocy;&chcy;&iecy;&iecy; &mcy;&iecy;&scy;&tcy;&ocy; &mdash; &ecy;&tcy;&ocy; &ncy;&iecy; &ocy;&dcy;&icy;&ncy; &mcy;&iecy;&scy;&scy;&iecy;&ncy;&dcy;&zhcy;&iecy;&rcy;. &Ecy;&tcy;&ocy; &ncy;&iecy;&scy;&kcy;&ocy;&lcy;&softcy;&kcy;&ocy; &scy;&vcy;&yacy;&zcy;&acy;&ncy;&ncy;&ycy;&khcy; &ucy;&rcy;&ocy;&vcy;&ncy;&iecy;&jcy;: &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&acy; &icy; &scy;&iecy;&tcy;&icy;, &ocy;&bcy;&lcy;&acy;&chcy;&ncy;&ycy;&iecy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy;, &ucy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&ocy;&mcy; &icy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&ocy;&ncy;&ncy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy;.
-      </p>
-      <p>
-       &Ncy;&acy; &pcy;&iecy;&rcy;&vcy;&ocy;&mcy; &ucy;&rcy;&ocy;&vcy;&ncy;&iecy; &ncy;&acy;&khcy;&ocy;&dcy;&yacy;&tcy;&scy;&yacy; &ncy;&ocy;&ucy;&tcy;&bcy;&ucy;&kcy;&icy;, &scy;&mcy;&acy;&rcy;&tcy;&fcy;&ocy;&ncy;&ycy; &icy; &kcy;&acy;&ncy;&acy;&lcy;&ycy; &scy;&vcy;&yacy;&zcy;&icy;. &Ncy;&acy; &vcy;&tcy;&ocy;&rcy;&ocy;&mcy; &mdash; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy; &vcy;&icy;&dcy;&iecy;&ocy;&kcy;&ocy;&ncy;&fcy;&iecy;&rcy;&iecy;&ncy;&tscy;&icy;&jcy;, &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&ncy;&ocy;&gcy;&ocy; &rcy;&iecy;&dcy;&acy;&kcy;&tcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy;, &ocy;&bcy;&lcy;&acy;&chcy;&ncy;&ycy;&iecy; &khcy;&rcy;&acy;&ncy;&icy;&lcy;&icy;&shchcy;&acy; &icy; &tcy;&rcy;&iecy;&kcy;&iecy;&rcy;&ycy; &zcy;&acy;&dcy;&acy;&chcy;. &Tcy;&rcy;&iecy;&tcy;&icy;&jcy; &ucy;&rcy;&ocy;&vcy;&iecy;&ncy;&softcy; &ocy;&bcy;&iecy;&scy;&pcy;&iecy;&chcy;&icy;&vcy;&acy;&iecy;&tcy; &icy;&dcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tscy;&icy;&yucy; &pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&iecy;&jcy;, &pcy;&rcy;&acy;&vcy;&acy;, &ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&ocy;&ncy;&ncy;&ycy;&jcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&ocy;&bcy;&ocy;&rcy;&ocy;&tcy; &icy; &zcy;&acy;&shchcy;&icy;&tcy;&ucy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&icy;. &CHcy;&iecy;&tcy;&vcy;&iocy;&rcy;&tcy;&ycy;&jcy; &ocy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&yacy;&iecy;&tcy;, &kcy;&acy;&kcy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&acy; &fcy;&icy;&kcy;&scy;&icy;&rcy;&ucy;&iecy;&tcy; &rcy;&iecy;&shcy;&iecy;&ncy;&icy;&yacy;, &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&iocy;&tcy; &zcy;&ncy;&acy;&ncy;&icy;&yacy; &icy; &ocy;&tscy;&iecy;&ncy;&icy;&vcy;&acy;&iecy;&tcy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&ycy;.
-      </p>
-      <div class="stack">
-       <div class="stack-layer">
-        <span>
+<div class="stack">
+<div class="stack-layer">
+<span>
          04
         </span>
-        <div>
-         <strong>
-          &Pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &icy; &kcy;&ucy;&lcy;&softcy;&tcy;&ucy;&rcy;&acy;
+<div>
+<strong>
+          Правила и культура
          </strong>
-         <small>
-          &Rcy;&ocy;&lcy;&icy;, &scy;&rcy;&ocy;&kcy;&icy;, &acy;&scy;&icy;&ncy;&khcy;&rcy;&ocy;&ncy;&ncy;&acy;&yacy; &kcy;&ocy;&mcy;&mcy;&ucy;&ncy;&icy;&kcy;&acy;&tscy;&icy;&yacy;, &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&tscy;&icy;&yacy;
+<small>
+          Роли, сроки, асинхронная коммуникация, документация
          </small>
-        </div>
-       </div>
-       <div class="stack-layer">
-        <span>
+</div>
+</div>
+<div class="stack-layer">
+<span>
          03
         </span>
-        <div>
-         <strong>
-          &Icy;&dcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &icy; &bcy;&iecy;&zcy;&ocy;&pcy;&acy;&scy;&ncy;&ocy;&scy;&tcy;&softcy;
+<div>
+<strong>
+          Идентификация и безопасность
          </strong>
-         <small>
-          MFA, &kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&softcy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;, &shcy;&icy;&fcy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;, &zhcy;&ucy;&rcy;&ncy;&acy;&lcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;
+<small>
+          MFA, контроль доступа, шифрование, журналирование
          </small>
-        </div>
-       </div>
-       <div class="stack-layer">
-        <span>
+</div>
+</div>
+<div class="stack-layer">
+<span>
          02
         </span>
-        <div>
-         <strong>
-          &TScy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy;
+<div>
+<strong>
+          Цифровые инструменты
          </strong>
-         <small>
-          &Ocy;&bcy;&lcy;&acy;&kcy;&ocy;, &zcy;&acy;&dcy;&acy;&chcy;&icy;, &fcy;&acy;&jcy;&lcy;&ycy;, &vcy;&icy;&dcy;&iecy;&ocy;&scy;&vcy;&yacy;&zcy;&softcy;, &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&ncy;&ocy;&iecy; &rcy;&iecy;&dcy;&acy;&kcy;&tcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;
+<small>
+          Облако, задачи, файлы, видеосвязь, совместное редактирование
          </small>
-        </div>
-       </div>
-       <div class="stack-layer">
-        <span>
+</div>
+</div>
+<div class="stack-layer">
+<span>
          01
         </span>
-        <div>
-         <strong>
-          &Scy;&iecy;&tcy;&icy; &icy; &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&acy;
+<div>
+<strong>
+          Сети и устройства
          </strong>
-         <small>
-          &Pcy;&ocy;&dcy;&kcy;&lcy;&yucy;&chcy;&iecy;&ncy;&icy;&iecy;, &rcy;&acy;&bcy;&ocy;&chcy;&acy;&yacy; &scy;&tcy;&acy;&ncy;&tscy;&icy;&yacy;, &rcy;&iecy;&zcy;&iecy;&rcy;&vcy;&ncy;&ycy;&iecy; &kcy;&acy;&ncy;&acy;&lcy;&ycy;
+<small>
+          Подключение, рабочая станция, резервные каналы
          </small>
-        </div>
-       </div>
-      </div>
-      <p>
-       &IEcy;&scy;&lcy;&icy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy; &rcy;&acy;&zcy;&bcy;&rcy;&ocy;&scy;&acy;&ncy;&ycy; &mcy;&iecy;&zhcy;&dcy;&ucy; &pcy;&ocy;&chcy;&tcy;&ocy;&jcy;, &chcy;&acy;&tcy;&acy;&mcy;&icy; &icy; &lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy; &dcy;&icy;&scy;&kcy;&acy;&mcy;&icy;, &scy;&ocy;&tcy;&rcy;&ucy;&dcy;&ncy;&icy;&kcy;&icy; &ncy;&acy;&chcy;&icy;&ncy;&acy;&yucy;&tcy; &tcy;&rcy;&acy;&tcy;&icy;&tcy;&softcy; &vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&acy; &pcy;&ocy;&icy;&scy;&kcy; &acy;&kcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &vcy;&iecy;&rcy;&scy;&icy;&icy; &icy; &ucy;&tcy;&ocy;&chcy;&ncy;&iecy;&ncy;&icy;&iecy; &kcy;&ocy;&ncy;&tcy;&iecy;&kcy;&scy;&tcy;&acy;. &Icy;&ncy;&tcy;&iecy;&gcy;&rcy;&acy;&tscy;&icy;&yacy; &scy;&icy;&scy;&tcy;&iecy;&mcy;, &iecy;&dcy;&icy;&ncy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &khcy;&rcy;&acy;&ncy;&iecy;&ncy;&icy;&yacy; &icy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&ncy;&acy;&yacy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&tscy;&icy;&yacy; &chcy;&acy;&scy;&tcy;&ocy; &dcy;&acy;&yucy;&tcy; &ncy;&iecy; &mcy;&iecy;&ncy;&softcy;&shcy;&icy;&jcy; &ecy;&fcy;&fcy;&iecy;&kcy;&tcy;, &chcy;&iecy;&mcy; &dcy;&ocy;&bcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &ncy;&ocy;&vcy;&ycy;&khcy; &fcy;&ucy;&ncy;&kcy;&tscy;&icy;&jcy;.
+</div>
+</div>
+</div>
+<p>
+       Если документы разбросаны между почтой, чатами и личными дисками, сотрудники начинают тратить время на поиск актуальной версии и уточнение контекста. Интеграция систем, единые правила хранения и доступная документация часто дают не меньший эффект, чем добавление новых функций.
       </p>
-      <h3>
-       &Icy;&Icy;: &pcy;&ocy;&mcy;&ocy;&shchcy;&ncy;&icy;&kcy;, &acy; &ncy;&iecy; &ocy;&kcy;&ocy;&ncy;&chcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&jcy; &acy;&rcy;&bcy;&icy;&tcy;&rcy;
-      </h3>
-      <p>
-       &Icy;&scy;&kcy;&ucy;&scy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ycy;&jcy; &icy;&ncy;&tcy;&iecy;&lcy;&lcy;&iecy;&kcy;&tcy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&iecy;&ncy; &rcy;&acy;&scy;&shcy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&vcy;&acy;&tcy;&softcy; &vcy;&scy;&tcy;&rcy;&iecy;&chcy;&icy;, &pcy;&rcy;&iecy;&vcy;&rcy;&acy;&shchcy;&acy;&tcy;&softcy; &ocy;&bcy;&scy;&ucy;&zhcy;&dcy;&iecy;&ncy;&icy;&yacy; &vcy; &pcy;&iecy;&rcy;&iecy;&chcy;&iecy;&ncy;&softcy; &zcy;&acy;&dcy;&acy;&chcy;, &icy;&scy;&kcy;&acy;&tcy;&softcy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&yucy; &vcy; &bcy;&acy;&zcy;&iecy; &zcy;&ncy;&acy;&ncy;&icy;&jcy; &icy; &pcy;&rcy;&iecy;&dcy;&lcy;&acy;&gcy;&acy;&tcy;&softcy; &pcy;&iecy;&rcy;&vcy;&ycy;&iecy; &vcy;&iecy;&rcy;&scy;&icy;&icy; &ocy;&tcy;&vcy;&iecy;&tcy;&ocy;&vcy;. &Pcy;&rcy;&icy; &ecy;&tcy;&ocy;&mcy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &ocy;&kcy;&acy;&zcy;&acy;&tcy;&softcy;&scy;&yacy; &ncy;&iecy;&tcy;&ocy;&chcy;&ncy;&ycy;&mcy;. &Ocy;&scy;&ocy;&bcy;&ocy;&iecy; &zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy; &pcy;&rcy;&icy;&ocy;&bcy;&rcy;&iecy;&tcy;&acy;&yucy;&tcy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&kcy;&acy; &chcy;&iecy;&lcy;&ocy;&vcy;&iecy;&kcy;&ocy;&mcy;, &ucy;&kcy;&acy;&zcy;&acy;&ncy;&icy;&iecy; &icy;&scy;&khcy;&ocy;&dcy;&ncy;&ycy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &icy; &zcy;&acy;&pcy;&rcy;&iecy;&tcy; &ncy;&iecy;&kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&icy;&rcy;&ucy;&iecy;&mcy;&ocy;&jcy; &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&chcy;&icy; &kcy;&ocy;&ncy;&fcy;&icy;&dcy;&iecy;&ncy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;.
+<h3>Применение искусственного интеллекта</h3>
+<p>
+       Искусственный интеллект способен расшифровывать встречи, превращать обсуждения в перечень задач, искать информацию в базе знаний и предлагать первые версии ответов. При этом результат может оказаться неточным. Особое значение приобретают проверка человеком, указание исходных документов и запрет неконтролируемой передачи конфиденциальных данных.
       </p>
-      <h3>
-       VR/AR: &pcy;&rcy;&icy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&iecy; &tcy;&acy;&mcy;, &gcy;&dcy;&iecy; &ocy;&ncy;&ocy; &ncy;&ucy;&zhcy;&ncy;&ocy;
-      </h3>
-      <p>
-       &Vcy;&icy;&rcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &icy; &dcy;&ocy;&pcy;&ocy;&lcy;&ncy;&iecy;&ncy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&scy;&tcy;&rcy;&acy;&ncy;&scy;&tcy;&vcy;&acy; &pcy;&ocy;&lcy;&iecy;&zcy;&ncy;&ycy;, &kcy;&ocy;&gcy;&dcy;&acy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&acy; &vcy;&zcy;&acy;&icy;&mcy;&ocy;&dcy;&iecy;&jcy;&scy;&tcy;&vcy;&ucy;&iecy;&tcy; &scy; &ocy;&bcy;&hardcy;&iocy;&mcy;&ncy;&ycy;&mcy;&icy; &mcy;&ocy;&dcy;&iecy;&lcy;&yacy;&mcy;&icy;: &pcy;&rcy;&icy; &pcy;&rcy;&ocy;&iecy;&kcy;&tcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&icy;, &ocy;&bcy;&ucy;&chcy;&iecy;&ncy;&icy;&icy;, &tcy;&iecy;&khcy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &kcy;&ocy;&ncy;&scy;&ucy;&lcy;&softcy;&tcy;&acy;&tscy;&icy;&yacy;&khcy; &icy; &dcy;&iecy;&mcy;&ocy;&ncy;&scy;&tcy;&rcy;&acy;&tscy;&icy;&yacy;&khcy; &ocy;&bcy;&ocy;&rcy;&ucy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;. &Dcy;&lcy;&yacy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy;&gcy;&ocy; &ocy;&bcy;&scy;&ucy;&zhcy;&dcy;&iecy;&ncy;&icy;&yacy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy; &pcy;&ocy;&lcy;&ncy;&ocy;&tscy;&iecy;&ncy;&ncy;&acy;&yacy; VR-&scy;&rcy;&iecy;&dcy;&acy;, &kcy;&acy;&kcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&ocy;, &ncy;&iecy;&ocy;&pcy;&rcy;&acy;&vcy;&dcy;&acy;&ncy;&ncy;&ocy; &scy;&lcy;&ocy;&zhcy;&ncy;&acy;. &Ncy;&ocy;&vcy;&ycy;&iecy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &scy;&lcy;&iecy;&dcy;&ucy;&iecy;&tcy; &pcy;&rcy;&icy;&mcy;&iecy;&ncy;&yacy;&tcy;&softcy; &icy;&zcy;&bcy;&icy;&rcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &mdash; &vcy; &scy;&tscy;&iecy;&ncy;&acy;&rcy;&icy;&yacy;&khcy;, &gcy;&dcy;&iecy; &icy;&khcy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &vcy;&acy;&zhcy;&ncy;&ycy;.
+<h3>Применение виртуальной и дополненной реальности</h3>
+<p>
+       Виртуальные и дополненные пространства полезны, когда команда взаимодействует с объёмными моделями: при проектировании, обучении, технических консультациях и демонстрациях оборудования. Для обычного обсуждения документа полноценная VR-среда, как правило, неоправданно сложна. Новые технологии следует применять избирательно — в сценариях, где их возможности действительно важны.
       </p>
-      <h3>
-       &Bcy;&iecy;&zcy;&ocy;&pcy;&acy;&scy;&ncy;&ocy;&scy;&tcy;&softcy;: &dcy;&ocy;&vcy;&iecy;&rcy;&yacy;&tcy;&softcy; &ncy;&iecy; &mcy;&iecy;&scy;&tcy;&ocy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yucy;, &acy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&kcy;&iecy;
-      </h3>
-      <p>
-       &Ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ycy;&jcy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy; &rcy;&acy;&scy;&shcy;&icy;&rcy;&yacy;&iecy;&tcy; &pcy;&ocy;&vcy;&iecy;&rcy;&khcy;&ncy;&ocy;&scy;&tcy;&softcy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ycy;&khcy; &acy;&tcy;&acy;&kcy;: &rcy;&acy;&bcy;&ocy;&tcy;&ncy;&icy;&kcy;&icy; &pcy;&ocy;&dcy;&kcy;&lcy;&yucy;&chcy;&acy;&yucy;&tcy;&scy;&yacy; &icy;&zcy; &dcy;&ocy;&mcy;&acy;&shcy;&ncy;&icy;&khcy; &scy;&iecy;&tcy;&iecy;&jcy;, &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&yucy;&tcy; &rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ycy;&iecy; &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&acy; &icy; &vcy;&ncy;&iecy;&shcy;&ncy;&icy;&iecy; &scy;&iecy;&rcy;&vcy;&icy;&scy;&ycy;. &Pcy;&ocy;&ecy;&tcy;&ocy;&mcy;&ucy; &ncy;&ucy;&zhcy;&ncy;&ycy; &mcy;&ncy;&ocy;&gcy;&ocy;&fcy;&acy;&kcy;&tcy;&ocy;&rcy;&ncy;&acy;&yacy; &acy;&ucy;&tcy;&iecy;&ncy;&tcy;&icy;&fcy;&icy;&kcy;&acy;&tscy;&icy;&yacy;, &shcy;&icy;&fcy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy; &scy;&ocy;&iecy;&dcy;&icy;&ncy;&iecy;&ncy;&icy;&jcy;, &acy;&kcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &ocy;&bcy;&ncy;&ocy;&vcy;&lcy;&iecy;&ncy;&icy;&yacy;, &rcy;&iecy;&zcy;&iecy;&rcy;&vcy;&ncy;&ocy;&iecy; &kcy;&ocy;&pcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy; &icy; &mcy;&icy;&ncy;&icy;&mcy;&acy;&lcy;&softcy;&ncy;&ocy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&acy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;.
+<h3>Информационная безопасность удалённого доступа</h3>
+<p>
+       Удалённый доступ расширяет поверхность возможных атак: работники подключаются из домашних сетей, используют различные устройства и внешние сервисы. Поэтому нужны многофакторная аутентификация, шифрование соединений, актуальные обновления, резервное копирование и минимально необходимые права доступа.
       </p>
-      <p>
-       &Pcy;&ocy;&dcy;&khcy;&ocy;&dcy;
+<p>
+       Подход
        <strong>
         Zero Trust
        </strong>
-       &pcy;&rcy;&iecy;&dcy;&pcy;&ocy;&lcy;&acy;&gcy;&acy;&iecy;&tcy;, &chcy;&tcy;&ocy; &zcy;&acy;&pcy;&rcy;&ocy;&scy; &ncy;&acy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&iecy;&tcy;&scy;&yacy; &vcy; &zcy;&acy;&vcy;&icy;&scy;&icy;&mcy;&ocy;&scy;&tcy;&icy; &ocy;&tcy; &pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&yacy;, &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&acy; &icy; &kcy;&ocy;&ncy;&tcy;&iecy;&kcy;&scy;&tcy;&acy;, &acy; &ncy;&iecy; &rcy;&acy;&zcy;&rcy;&iecy;&shcy;&acy;&iecy;&tcy;&scy;&yacy; &lcy;&icy;&shcy;&softcy; &pcy;&ocy;&tcy;&ocy;&mcy;&ucy;, &chcy;&tcy;&ocy; &scy;&ocy;&iecy;&dcy;&icy;&ncy;&iecy;&ncy;&icy;&iecy; &icy;&scy;&khcy;&ocy;&dcy;&icy;&tcy; &icy;&zcy; &laquo;&vcy;&ncy;&ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&iecy;&jcy;&raquo; &scy;&iecy;&tcy;&icy;. &Rcy;&ucy;&kcy;&ocy;&vcy;&ocy;&dcy;&scy;&tcy;&vcy;&ocy;
+       предполагает, что запрос на доступ проверяется в зависимости от пользователя, устройства и контекста, а не разрешается лишь потому, что соединение исходит из «внутренней» сети. Руководство
        <a href="https://csrc.nist.gov/pubs/sp/800/46/r2/final" rel="noopener noreferrer" target="_blank">
         NIST SP 800-46 Rev. 2
        </a>
-       &scy;&icy;&scy;&tcy;&iecy;&mcy;&acy;&tcy;&icy;&zcy;&icy;&rcy;&ucy;&iecy;&tcy; &mcy;&iecy;&rcy;&ycy; &zcy;&acy;&shchcy;&icy;&tcy;&ycy; &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ocy;&gcy;&ocy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy; &icy; &pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&kcy;&icy;&khcy; &ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;.
+       систематизирует меры защиты удалённого доступа и пользовательских устройств.
       </p>
-     </div>
-    </div>
-   </section>
-   <section class="research-section section-pad" id="research">
-    <div class="container">
-     <div class="research-intro">
-      <span class="section-index">
-       06 / &Icy;&Scy;&Scy;&Lcy;&IEcy;&Dcy;&Ocy;&Vcy;&Acy;&Ncy;&Icy;&YAcy;
+</div>
+</div>
+</section>
+<section class="research-section section-pad" id="research">
+<div class="container">
+<div class="research-intro">
+<span class="section-index">
+       06 / ИССЛЕДОВАНИЯ
       </span>
-      <h2>
-       &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &icy; &pcy;&rcy;&acy;&kcy;&tcy;&icy;&kcy;&acy;
+<h2>
+       Исследования и практика
       </h2>
-      <p>
-       &Tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &kcy;&ocy;&ncy;&tscy;&iecy;&pcy;&tscy;&icy;&icy; &scy;&tcy;&acy;&ncy;&ocy;&vcy;&yacy;&tcy;&scy;&yacy; &ucy;&bcy;&iecy;&dcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&iecy;&iecy;, &kcy;&ocy;&gcy;&dcy;&acy; &icy;&khcy; &scy;&ocy;&pcy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&yacy;&yucy;&tcy; &scy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&acy;&mcy;&icy; &icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&jcy; &icy; &ocy;&pcy;&ycy;&tcy;&ocy;&mcy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&ucy;&yucy;&shchcy;&icy;&khcy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&jcy;.
-      </p>
-     </div>
-     <div class="research-cards">
-      <article class="research-card">
-       <span class="card-type">
-        &Ncy;&Acy;&Ucy;&CHcy;&Ncy;&Ocy;&IEcy; &Icy;&Scy;&Scy;&Lcy;&IEcy;&Dcy;&Ocy;&Vcy;&Acy;&Ncy;&Icy;&IEcy; &middot; 2024
+<p>В разделе приведены результаты научного исследования, пример организации распределённой работы и технический стандарт для токенов NFT.</p>
+</div>
+<div class="research-cards">
+<article class="research-card">
+<span class="card-type">
+        НАУЧНОЕ ИССЛЕДОВАНИЕ · 2024
        </span>
-       <div class="research-stat">
+<div class="research-stat">
         1 612
         <span>
-         &ucy;&chcy;&acy;&scy;&tcy;&ncy;&icy;&kcy;&ocy;&vcy;
+         участников
         </span>
-       </div>
-       <h3>
-        &Gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&acy;&yacy; &rcy;&acy;&bcy;&ocy;&tcy;&acy; &icy; &ucy;&dcy;&iecy;&rcy;&zhcy;&acy;&ncy;&icy;&iecy; &scy;&ocy;&tcy;&rcy;&ucy;&dcy;&ncy;&icy;&kcy;&ocy;&vcy;
+</div>
+<h3>
+        Гибридная работа и удержание сотрудников
        </h3>
-       <p>
-        &Vcy; &rcy;&acy;&ncy;&dcy;&ocy;&mcy;&icy;&zcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&ncy;&ocy;&mcy; &icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&icy; &rcy;&acy;&bcy;&ocy;&tcy;&ncy;&icy;&kcy;&ocy;&vcy; Trip.com &gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&ycy;&jcy; &gcy;&rcy;&acy;&fcy;&icy;&kcy; &scy; &dcy;&vcy;&ucy;&mcy;&yacy; &dcy;&ncy;&yacy;&mcy;&icy; &icy;&zcy; &dcy;&ocy;&mcy;&acy; &scy;&ocy;&pcy;&rcy;&ocy;&vcy;&ocy;&zhcy;&dcy;&acy;&lcy;&scy;&yacy; &scy;&ncy;&icy;&zhcy;&iecy;&ncy;&icy;&iecy;&mcy; &ucy;&vcy;&ocy;&lcy;&softcy;&ncy;&iecy;&ncy;&icy;&jcy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &ncy;&acy; &tcy;&rcy;&iecy;&tcy;&softcy; &bcy;&iecy;&zcy; &ocy;&bcy;&ncy;&acy;&rcy;&ucy;&zhcy;&iecy;&ncy;&ncy;&ocy;&gcy;&ocy; &ucy;&khcy;&ucy;&dcy;&shcy;&iecy;&ncy;&icy;&yacy; &pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&iecy;&lcy;&iecy;&jcy; &pcy;&rcy;&ocy;&icy;&zcy;&vcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&icy;. &Ecy;&tcy;&ocy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy; &kcy;&ocy;&ncy;&kcy;&rcy;&iecy;&tcy;&ncy;&ocy;&gcy;&ocy; &ecy;&kcy;&scy;&pcy;&iecy;&rcy;&icy;&mcy;&iecy;&ncy;&tcy;&acy;, &acy; &ncy;&iecy; &ucy;&ncy;&icy;&vcy;&iecy;&rcy;&scy;&acy;&lcy;&softcy;&ncy;&acy;&yacy; &gcy;&acy;&rcy;&acy;&ncy;&tcy;&icy;&yacy;.
+<p>
+        В рандомизированном исследовании работников Trip.com гибридный график с двумя днями из дома сопровождался снижением увольнений примерно на треть без обнаруженного ухудшения показателей производительности. Это результат конкретного эксперимента, а не универсальная гарантия.
        </p>
-       <a href="https://www.nature.com/articles/s41586-024-07500-2" rel="noopener noreferrer" target="_blank">
-        Bloom, Han, Liang &middot; Nature
+<a href="https://www.nature.com/articles/s41586-024-07500-2" rel="noopener noreferrer" target="_blank">
+        Bloom, Han, Liang · Nature
        </a>
-      </article>
-      <article class="research-card">
-       <span class="card-type">
-        &Pcy;&Rcy;&Acy;&Kcy;&Tcy;&Icy;&CHcy;&IEcy;&Scy;&Kcy;&Icy;&Jcy; &Kcy;&IEcy;&Jcy;&Scy;
+</article>
+<article class="research-card">
+<span class="card-type">
+        ПРАКТИЧЕСКИЙ КЕЙС
        </span>
-       <div class="research-stat">
+<div class="research-stat">
         GitLab
         <span>
          / all-remote
         </span>
-       </div>
-       <h3>
-        &Kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&yacy;, &vcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ocy;&jcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&tscy;&icy;&yacy; &mdash; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&acy;
-       </h3>
-       <p>
-        GitLab &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy; &ocy;&pcy;&icy;&scy;&ycy;&vcy;&acy;&iecy;&tcy; &scy;&vcy;&ocy;&yucy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy; &rcy;&acy;&scy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&iocy;&ncy;&ncy;&ocy;&jcy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&ycy;: &acy;&scy;&icy;&ncy;&khcy;&rcy;&ocy;&ncy;&ncy;&ycy;&iecy; &kcy;&ocy;&mcy;&mcy;&ucy;&ncy;&icy;&kcy;&acy;&tscy;&icy;&icy;, &pcy;&icy;&scy;&softcy;&mcy;&iecy;&ncy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&scy;&scy;&ycy;, &ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&ucy;&yucy; &bcy;&acy;&zcy;&ucy; &zcy;&ncy;&acy;&ncy;&icy;&jcy; &icy; &ocy;&tscy;&iecy;&ncy;&kcy;&ucy; &rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&acy; &vcy;&mcy;&iecy;&scy;&tcy;&ocy; &pcy;&rcy;&icy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&yacy; &vcy; &ocy;&fcy;&icy;&scy;&iecy;. &Ecy;&tcy;&ocy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy; &vcy;&ncy;&iecy;&dcy;&rcy;&iecy;&ncy;&icy;&yacy;, &acy; &ncy;&iecy; &dcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&ocy; &pcy;&rcy;&icy;&mcy;&iecy;&ncy;&icy;&mcy;&ocy;&scy;&tcy;&icy; &dcy;&lcy;&yacy; &lcy;&yucy;&bcy;&ocy;&gcy;&ocy; &bcy;&icy;&zcy;&ncy;&iecy;&scy;&acy;.
+</div>
+<h3>Опыт GitLab в организации распределённой работы</h3>
+<p>
+        GitLab публично описывает свою модель распределённой команды: асинхронные коммуникации, письменные процессы, открытую базу знаний и оценку результата вместо присутствия в офисе. Это пример внедрения, а не доказательство применимости для любого бизнеса.
        </p>
-       <a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/remote-benefits/" rel="noopener noreferrer" target="_blank">
-        &Rcy;&ucy;&kcy;&ocy;&vcy;&ocy;&dcy;&scy;&tcy;&vcy;&ocy; GitLab
+<a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/remote-benefits/" rel="noopener noreferrer" target="_blank">
+        Руководство GitLab
        </a>
-      </article>
-      <article class="research-card">
-       <span class="card-type">
-        &Scy;&Tcy;&Acy;&Ncy;&Dcy;&Acy;&Rcy;&Tcy; / &Ecy;&Kcy;&Scy;&Pcy;&IEcy;&Rcy;&Tcy;&Ncy;&Ycy;&Jcy; &Mcy;&Acy;&Tcy;&IEcy;&Rcy;&Icy;&Acy;&Lcy;
+</article>
+<article class="research-card">
+<span class="card-type">
+        СТАНДАРТ / ЭКСПЕРТНЫЙ МАТЕРИАЛ
        </span>
-       <div class="research-stat">
+<div class="research-stat">
         ERC
         <span>
-         &ndash;721
+         –721
         </span>
-       </div>
-       <h3>
-        &Scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy; &vcy;&mcy;&iecy;&scy;&tcy;&ocy; &ncy;&iecy;&scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&icy;&mcy;&ycy;&khcy; &rcy;&iecy;&shcy;&iecy;&ncy;&icy;&jcy;
-       </h3>
-       <p>
-        &Icy;&ncy;&tcy;&iecy;&rcy;&fcy;&iecy;&jcy;&scy; ERC-721 &ocy;&pcy;&rcy;&iecy;&dcy;&iecy;&lcy;&yacy;&iecy;&tcy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &ucy;&chcy;&iocy;&tcy;&acy; &icy; &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&chcy;&icy; &ncy;&iecy;&vcy;&zcy;&acy;&icy;&mcy;&ocy;&zcy;&acy;&mcy;&iecy;&ncy;&yacy;&iecy;&mcy;&ycy;&khcy; &tcy;&ocy;&kcy;&iecy;&ncy;&ocy;&vcy; &vcy; &scy;&ocy;&vcy;&mcy;&iecy;&scy;&tcy;&icy;&mcy;&ycy;&khcy; &scy;&mcy;&acy;&rcy;&tcy;-&kcy;&ocy;&ncy;&tcy;&rcy;&acy;&kcy;&tcy;&acy;&khcy; Ethereum. &Scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &pcy;&ocy;&mcy;&ocy;&gcy;&acy;&iecy;&tcy; &kcy;&ocy;&shcy;&iecy;&lcy;&softcy;&kcy;&acy;&mcy; &icy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy;&mcy; &rcy;&acy;&bcy;&ocy;&tcy;&acy;&tcy;&softcy; &scy; &tcy;&ocy;&kcy;&iecy;&ncy;&acy;&mcy;&icy; &rcy;&acy;&zcy;&ncy;&ycy;&khcy; &pcy;&rcy;&ocy;&iecy;&kcy;&tcy;&ocy;&vcy;.
+</div>
+<h3>Стандарт ERC-721 для невзаимозаменяемых токенов</h3>
+<p>
+        Интерфейс ERC-721 определяет правила учёта и передачи невзаимозаменяемых токенов в совместимых смарт-контрактах Ethereum. Стандартизация помогает кошелькам и приложениям работать с токенами разных проектов.
        </p>
-       <a href="https://ercs.ethereum.org/ERCS/erc-721" rel="noopener noreferrer" target="_blank">
-        &Scy;&pcy;&iecy;&tscy;&icy;&fcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; ERC-721
+<a href="https://ercs.ethereum.org/ERCS/erc-721" rel="noopener noreferrer" target="_blank">
+        Спецификация ERC-721
        </a>
-      </article>
-     </div>
-     <figure aria-label="&Scy;&rcy;&acy;&vcy;&ncy;&iecy;&ncy;&icy;&iecy; &dcy;&ocy;&lcy;&icy; &ucy;&vcy;&ocy;&lcy;&softcy;&ncy;&iecy;&ncy;&icy;&jcy;: 7,2 &pcy;&rcy;&ocy;&tscy;&iecy;&ncy;&tcy;&acy; &vcy; &kcy;&ocy;&ncy;&tcy;&rcy;&ocy;&lcy;&softcy;&ncy;&ocy;&jcy; &gcy;&rcy;&ucy;&pcy;&pcy;&iecy; &icy; 4,8 &pcy;&rcy;&ocy;&tscy;&iecy;&ncy;&tcy;&acy; &vcy; &gcy;&rcy;&ucy;&pcy;&pcy;&iecy; &scy; &gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&ycy;&mcy; &gcy;&rcy;&acy;&fcy;&icy;&kcy;&ocy;&mcy;." class="evidence-chart">
-      <figcaption>
-       <span class="mini-label">
-        &Vcy;&Icy;&Zcy;&Ucy;&Acy;&Lcy;&Icy;&Zcy;&Acy;&TScy;&Icy;&YAcy; &Rcy;&IEcy;&Zcy;&Ucy;&Lcy;&SOFTcy;&Tcy;&Acy;&Tcy;&Ocy;&Vcy;
+</article>
+</div>
+<figure aria-label="Сравнение доли увольнений: 7,2 процента в контрольной группе и 4,8 процента в группе с гибридным графиком." class="evidence-chart">
+<figcaption>
+<span class="mini-label">
+        ВИЗУАЛИЗАЦИЯ РЕЗУЛЬТАТОВ
        </span>
-       <h3>
-        &Ucy;&vcy;&ocy;&lcy;&softcy;&ncy;&iecy;&ncy;&icy;&yacy; &vcy; &ecy;&kcy;&scy;&pcy;&iecy;&rcy;&icy;&mcy;&iecy;&ncy;&tcy;&iecy; Trip.com
+<h3>
+        Увольнения в эксперименте Trip.com
        </h3>
-       <p>
-        &Dcy;&ocy;&lcy;&yacy; &scy;&ocy;&tcy;&rcy;&ucy;&dcy;&ncy;&icy;&kcy;&ocy;&vcy;, &pcy;&rcy;&iecy;&kcy;&rcy;&acy;&tcy;&icy;&vcy;&shcy;&icy;&khcy; &rcy;&acy;&bcy;&ocy;&tcy;&ucy; &zcy;&acy; &vcy;&rcy;&iecy;&mcy;&yacy; &icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;, %
+<p>
+        Доля сотрудников, прекративших работу за время исследования, %
        </p>
-      </figcaption>
-      <div class="chart-row">
-       <span>
-        &Ocy;&fcy;&icy;&scy; 5 &dcy;&ncy;&iecy;&jcy;
+</figcaption>
+<div class="chart-row">
+<span>
+        Офис 5 дней
        </span>
-       <div class="bar-track">
-        <div class="bar-fill baseline" style="width:72%">
-        </div>
-       </div>
-       <strong>
+<div class="bar-track">
+<div class="bar-fill baseline" style="width:72%">
+</div>
+</div>
+<strong>
         7,2%
        </strong>
-      </div>
-      <div class="chart-row">
-       <span>
-        &Gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&ycy;&jcy; &gcy;&rcy;&acy;&fcy;&icy;&kcy;
+</div>
+<div class="chart-row">
+<span>
+        Гибридный график
        </span>
-       <div class="bar-track">
-        <div class="bar-fill hybrid" style="width:48%">
-        </div>
-       </div>
-       <strong>
+<div class="bar-track">
+<div class="bar-fill hybrid" style="width:48%">
+</div>
+</div>
+<strong>
         4,8%
        </strong>
-      </div>
-      <p class="chart-caption">
-       &Icy;&scy;&tcy;&ocy;&chcy;&ncy;&icy;&kcy;: Bloom, Han, Liang,
+</div>
+<p class="chart-caption">
+       Источник: Bloom, Han, Liang,
        <a href="https://www.nature.com/articles/s41586-024-07500-2" rel="noopener noreferrer" target="_blank">
         Nature, 2024
        </a>
-       . &Scy;&rcy;&acy;&vcy;&ncy;&icy;&vcy;&acy;&yucy;&tcy;&scy;&yacy; &gcy;&rcy;&ucy;&pcy;&pcy;&ycy; &vcy; &ocy;&dcy;&ncy;&ocy;&mcy; &ecy;&kcy;&scy;&pcy;&iecy;&rcy;&icy;&mcy;&iecy;&ncy;&tcy;&iecy;; &shcy;&kcy;&acy;&lcy;&acy; &gcy;&rcy;&acy;&fcy;&icy;&kcy;&acy; 0&ndash;10%.
+       . Сравниваются группы в одном эксперименте; шкала графика 0–10%.
       </p>
-     </figure>
-     <div class="quiz">
-      <div class="quiz-top">
-       <span class="mini-label">
-        &Mcy;&Icy;&Ncy;&Icy;-&Pcy;&Rcy;&Ocy;&Vcy;&IEcy;&Rcy;&Kcy;&Acy;
-       </span>
-       <span>
+</figure>
+<div class="quiz">
+<div class="quiz-top">
+<span class="mini-label">ВОПРОС ПО МАТЕРИАЛУ</span>
+<span>
         01 / 01
        </span>
-      </div>
-      <h3>
-       &Vcy; &kcy;&acy;&kcy;&ocy;&mcy; &scy;&lcy;&ucy;&chcy;&acy;&iecy; &bcy;&lcy;&ocy;&kcy;&chcy;&iecy;&jcy;&ncy; &mcy;&ocy;&zhcy;&iecy;&tcy; &bcy;&ycy;&tcy;&softcy; &ocy;&bcy;&ocy;&scy;&ncy;&ocy;&vcy;&acy;&ncy;&ncy;&iecy;&iecy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy;&jcy; &bcy;&acy;&zcy;&ycy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy;?
-      </h3>
-      <div class="quiz-options">
-       <button data-correct="false" type="button">
-        &Kcy;&ocy;&gcy;&dcy;&acy; &pcy;&rcy;&icy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yucy; &ncy;&ucy;&zhcy;&iecy;&ncy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &kcy;&rcy;&acy;&scy;&icy;&vcy;&ycy;&jcy; &icy;&ncy;&tcy;&iecy;&rcy;&fcy;&iecy;&jcy;&scy;.
-       </button>
-       <button data-correct="true" type="button">
-        &Kcy;&ocy;&gcy;&dcy;&acy; &ncy;&iecy;&scy;&kcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ncy;&iecy;&zcy;&acy;&vcy;&icy;&scy;&icy;&mcy;&ycy;&khcy; &ucy;&chcy;&acy;&scy;&tcy;&ncy;&icy;&kcy;&ocy;&vcy; &dcy;&ocy;&lcy;&zhcy;&ncy;&ycy; &pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&yacy;&tcy;&softcy; &ocy;&bcy;&shchcy;&icy;&jcy; &rcy;&iecy;&iecy;&scy;&tcy;&rcy; &bcy;&iecy;&zcy; &iecy;&dcy;&icy;&ncy;&ocy;&gcy;&ocy; &dcy;&ocy;&vcy;&iecy;&rcy;&iecy;&ncy;&ncy;&ocy;&gcy;&ocy; &ocy;&pcy;&iecy;&rcy;&acy;&tcy;&ocy;&rcy;&acy;.
-       </button>
-       <button data-correct="false" type="button">
-        &Kcy;&ocy;&gcy;&dcy;&acy; &vcy;&scy;&iecy; &ucy;&chcy;&acy;&scy;&tcy;&ncy;&icy;&kcy;&icy; &pcy;&ocy;&lcy;&ncy;&ocy;&scy;&tcy;&softcy;&yucy; &dcy;&ocy;&vcy;&iecy;&rcy;&yacy;&yucy;&tcy; &ocy;&dcy;&ncy;&ocy;&jcy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&icy;.
-       </button>
-      </div>
-      <p aria-live="polite" class="quiz-feedback" id="quiz-feedback" role="status">
-      </p>
-     </div>
-    </div>
-   </section>
-   <section class="sources-section section-pad" id="sources">
-    <div class="container">
-     <div class="sources-head">
-      <span class="section-index">
-       &Icy;&Scy;&Tcy;&Ocy;&CHcy;&Ncy;&Icy;&Kcy;&Icy;
+</div>
+<h3>Выберите ситуацию, в которой распределённый реестр может иметь преимущества перед централизованной базой данных.</h3>
+<div class="quiz-options">
+<button data-correct="false" type="button">Когда необходимо только организовать пользовательский интерфейс.</button>
+<button data-correct="true" type="button">Когда несколько независимых участников должны проверять записи без единого доверенного оператора.</button>
+<button data-correct="false" type="button">Когда все участники используют систему одного доверенного оператора.</button>
+</div>
+<p aria-live="polite" class="quiz-feedback" id="quiz-feedback" role="status">
+</p>
+</div>
+</div>
+</section>
+<section class="sources-section section-pad" id="sources">
+<div class="container">
+<div class="sources-head">
+<span class="section-index">
+       ИСТОЧНИКИ
       </span>
-      <h2>
-       &Icy;&scy;&tcy;&ocy;&chcy;&ncy;&icy;&kcy;&icy; &icy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+<h2>
+       Источники и материалы
       </h2>
-      <p>
-       &Ncy;&acy;&ucy;&chcy;&ncy;&ycy;&iecy; &pcy;&ucy;&bcy;&lcy;&icy;&kcy;&acy;&tscy;&icy;&icy;, &tcy;&iecy;&khcy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&acy;&yacy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&tscy;&icy;&yacy;, &ncy;&ocy;&rcy;&mcy;&acy;&tcy;&icy;&vcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy; &icy; &pcy;&rcy;&acy;&kcy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &kcy;&iecy;&jcy;&scy;&ycy; &dcy;&lcy;&yacy; &dcy;&ocy;&pcy;&ocy;&lcy;&ncy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&gcy;&ocy; &chcy;&tcy;&iecy;&ncy;&icy;&yacy;.
+<p>
+       Научные публикации, техническая документация, нормативные материалы и практические кейсы для дополнительного чтения.
       </p>
-     </div>
-     <div class="source-columns">
-      <div>
-       <h3>
-        &Icy;&scy;&scy;&lcy;&iecy;&dcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &icy; &ncy;&ocy;&rcy;&mcy;&acy;&tcy;&icy;&vcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+</div>
+<div class="source-columns">
+<div>
+<h3>
+        Исследования и нормативные материалы
        </h3>
-       <ol class="source-list">
-        <li>
-         <a href="https://cyberleninka.ru/article/n/didzhitalizatsiya-fenomen-kontseptsii-industriya-4-0" rel="noopener noreferrer" target="_blank">
-          &Mcy;&acy;&jcy;&ocy;&rcy;&ocy;&vcy;&acy; &Kcy;. &Scy;. &Dcy;&icy;&dcy;&zhcy;&icy;&tcy;&acy;&lcy;&icy;&zcy;&acy;&tscy;&icy;&yacy;: &kcy;&ocy;&ncy;&tscy;&iecy;&pcy;&tscy;&icy;&yacy; &laquo;&Icy;&ncy;&dcy;&ucy;&scy;&tcy;&rcy;&icy;&yacy; 4.0&raquo;
+<ol class="source-list">
+<li>
+<a href="https://cyberleninka.ru/article/n/didzhitalizatsiya-fenomen-kontseptsii-industriya-4-0" rel="noopener noreferrer" target="_blank">
+          Майорова К. С. Диджитализация: концепция «Индустрия 4.0»
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/nevzaimozamenyaemyy-token-perspektivnyy-tsifrovoy-instrument-dlya-biznesa" rel="noopener noreferrer" target="_blank">
-          &Kcy;&acy;&shcy;&iecy;&vcy;&acy;&rcy;&ocy;&vcy;&acy; &Ncy;. &Acy;., &Scy;&tcy;&acy;&rcy;&icy;&kcy;&ocy;&vcy;&acy; &Icy;. &Scy;. NFT &kcy;&acy;&kcy; &tscy;&icy;&fcy;&rcy;&ocy;&vcy;&ocy;&jcy; &icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy; &bcy;&icy;&zcy;&ncy;&iecy;&scy;&acy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/nevzaimozamenyaemyy-token-perspektivnyy-tsifrovoy-instrument-dlya-biznesa" rel="noopener noreferrer" target="_blank">
+          Кашеварова Н. А., Старикова И. С. NFT как цифровой инструмент бизнеса
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/tokenizatsiya-realnyh-aktivov-klassifikatsiya-platformy-prilozheniya-vozmozhnosti-i-problemy-razvitiya" rel="noopener noreferrer" target="_blank">
-          &Acy;&ncy;&dcy;&rcy;&yucy;&shcy;&icy;&ncy; &Scy;. &Acy;. &Tcy;&ocy;&kcy;&iecy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &rcy;&iecy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &acy;&kcy;&tcy;&icy;&vcy;&ocy;&vcy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/tokenizatsiya-realnyh-aktivov-klassifikatsiya-platformy-prilozheniya-vozmozhnosti-i-problemy-razvitiya" rel="noopener noreferrer" target="_blank">
+          Андрюшин С. А. Токенизация реальных активов
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/finansovo-pravovoe-regulirovanie-nft-neobhodimost-i-dostatochnost" rel="noopener noreferrer" target="_blank">
-          &Scy;&ocy;&kcy;&ocy;&lcy;&ocy;&vcy;&acy; &IEcy;. &Scy;., &Fcy;&icy;&lcy;&icy;&mcy;&ocy;&ncy;&ocy;&vcy;&acy; &Acy;. &Icy;. &Rcy;&iecy;&gcy;&ucy;&lcy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy; NFT
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/finansovo-pravovoe-regulirovanie-nft-neobhodimost-i-dostatochnost" rel="noopener noreferrer" target="_blank">
+          Соколова Е. С., Филимонова А. И. Регулирование NFT
          </a>
-        </li>
-        <li>
-         <a href="https://www.consultant.ru/document/cons_doc_LAW_370070/" rel="noopener noreferrer" target="_blank">
-          &Fcy;&iecy;&dcy;&iecy;&rcy;&acy;&lcy;&softcy;&ncy;&ycy;&jcy; &zcy;&acy;&kcy;&ocy;&ncy; &ocy;&tcy; 08.12.2020 &numero; 407-&Fcy;&Zcy;
+</li>
+<li>
+<a href="https://www.consultant.ru/document/cons_doc_LAW_370070/" rel="noopener noreferrer" target="_blank">
+          Федеральный закон от 08.12.2020 № 407-ФЗ
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/rasshirenie-vliyaniya-tsifrovizatsii-ekonomiki-na-rynok-truda" rel="noopener noreferrer" target="_blank">
-          &Acy;&bcy;&dcy;&ucy;&lcy;&khcy;&acy;&lcy;&icy;&mcy;&ocy;&vcy; &Icy;. &KHcy;.-&Mcy;. &icy; &dcy;&rcy;. &TScy;&icy;&fcy;&rcy;&ocy;&vcy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &icy; &rcy;&ycy;&ncy;&ocy;&kcy; &tcy;&rcy;&ucy;&dcy;&acy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/rasshirenie-vliyaniya-tsifrovizatsii-ekonomiki-na-rynok-truda" rel="noopener noreferrer" target="_blank">
+          Абдулхалимов И. Х.-М. и др. Цифровизация и рынок труда
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/trud-v-usloviyah-udalennoy-i-gibridnoy-zanyatosti-na-primere-rabotnikov-it-kompaniy" rel="noopener noreferrer" target="_blank">
-          &Bcy;&acy;&lcy;&acy;&bcy;&acy;&ncy;&ocy;&vcy;&acy; &IEcy;. &Scy;., &Mcy;&ocy;&lcy;&chcy;&acy;&ncy;&ocy;&vcy;&acy; &Dcy;. &Acy;. &Ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&acy;&yacy; &icy; &gcy;&icy;&bcy;&rcy;&icy;&dcy;&ncy;&acy;&yacy; &zcy;&acy;&ncy;&yacy;&tcy;&ocy;&scy;&tcy;&softcy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/trud-v-usloviyah-udalennoy-i-gibridnoy-zanyatosti-na-primere-rabotnikov-it-kompaniy" rel="noopener noreferrer" target="_blank">
+          Балабанова Е. С., Молчанова Д. А. Удалённая и гибридная занятость
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/vozdeystvie-tsifrovyh-tehnologiy-na-vozmozhnosti-udalennoy-raboty-i-deyatelnost-virtualnyh-komand" rel="noopener noreferrer" target="_blank">
-          &Scy;&tcy;&rcy;&iecy;&lcy;&softcy;&ncy;&icy;&kcy;&ocy;&vcy;&acy; &Lcy;. &Acy;. &TScy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &icy; &vcy;&icy;&rcy;&tcy;&ucy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&ycy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/vozdeystvie-tsifrovyh-tehnologiy-na-vozmozhnosti-udalennoy-raboty-i-deyatelnost-virtualnyh-komand" rel="noopener noreferrer" target="_blank">
+          Стрельникова Л. А. Цифровые технологии и виртуальные команды
          </a>
-        </li>
-        <li>
-         <a href="https://cyberleninka.ru/article/n/tsifrovye-tehnologii-v-trudovyh-otnosheniyah" rel="noopener noreferrer" target="_blank">
-          &Acy;&bcy;&ucy;&zcy;&yacy;&rcy;&ocy;&vcy;&acy; &Ncy;. &Acy;. &TScy;&icy;&fcy;&rcy;&ocy;&vcy;&ycy;&iecy; &tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &vcy; &tcy;&rcy;&ucy;&dcy;&ocy;&vcy;&ycy;&khcy; &ocy;&tcy;&ncy;&ocy;&shcy;&iecy;&ncy;&icy;&yacy;&khcy;
+</li>
+<li>
+<a href="https://cyberleninka.ru/article/n/tsifrovye-tehnologii-v-trudovyh-otnosheniyah" rel="noopener noreferrer" target="_blank">
+          Абузярова Н. А. Цифровые технологии в трудовых отношениях
          </a>
-        </li>
-       </ol>
-      </div>
-      <div>
-       <h3>
-        &Scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ycy; &icy; &pcy;&rcy;&acy;&kcy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ycy;
+</li>
+</ol>
+</div>
+<div>
+<h3>
+        Стандарты и практические примеры
        </h3>
-       <ol class="source-list">
-        <li>
-         <a href="https://ercs.ethereum.org/ERCS/erc-721" rel="noopener noreferrer" target="_blank">
-          Ethereum: ERC-721 &mdash; &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy; NFT
+<ol class="source-list">
+<li>
+<a href="https://ercs.ethereum.org/ERCS/erc-721" rel="noopener noreferrer" target="_blank">
+          Ethereum: ERC-721 — стандарт NFT
          </a>
-        </li>
-        <li>
-         <a href="https://ethereum.org/developers/docs/standards/tokens" rel="noopener noreferrer" target="_blank">
-          Ethereum.org: &scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;&ycy; &tcy;&ocy;&kcy;&iecy;&ncy;&ocy;&vcy;
+</li>
+<li>
+<a href="https://ethereum.org/developers/docs/standards/tokens" rel="noopener noreferrer" target="_blank">
+          Ethereum.org: стандарты токенов
          </a>
-        </li>
-        <li>
-         <a href="https://csrc.nist.gov/pubs/sp/800/46/r2/final" rel="noopener noreferrer" target="_blank">
-          NIST SP 800-46 Rev. 2 &mdash; &bcy;&iecy;&zcy;&ocy;&pcy;&acy;&scy;&ncy;&ocy;&scy;&tcy;&softcy; &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ocy;&gcy;&ocy; &dcy;&ocy;&scy;&tcy;&ucy;&pcy;&acy;
+</li>
+<li>
+<a href="https://csrc.nist.gov/pubs/sp/800/46/r2/final" rel="noopener noreferrer" target="_blank">
+          NIST SP 800-46 Rev. 2 — безопасность удалённого доступа
          </a>
-        </li>
-        <li>
-         <a href="https://www.nature.com/articles/s41586-024-07500-2" rel="noopener noreferrer" target="_blank">
+</li>
+<li>
+<a href="https://www.nature.com/articles/s41586-024-07500-2" rel="noopener noreferrer" target="_blank">
           Bloom N., Han R., Liang J. Hybrid working from home... Nature (2024)
          </a>
-        </li>
-        <li>
-         <a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/remote-benefits/" rel="noopener noreferrer" target="_blank">
-          GitLab: &pcy;&rcy;&acy;&kcy;&tcy;&icy;&kcy;&icy; &pcy;&ocy;&lcy;&ncy;&ocy;&scy;&tcy;&softcy;&yucy; &ucy;&dcy;&acy;&lcy;&iocy;&ncy;&ncy;&ocy;&jcy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&icy;
+</li>
+<li>
+<a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/remote-benefits/" rel="noopener noreferrer" target="_blank">
+          GitLab: практики полностью удалённой компании
          </a>
-        </li>
-       </ol>
-      </div>
-     </div>
-    </div>
-   </section>
-  </main>
-  <footer class="footer">
-   <div class="container footer-inner">
-    <span>
-     &Icy;&ncy;&tcy;&iecy;&rcy;&ncy;&iecy;&tcy; &bcy;&ucy;&dcy;&ucy;&shchcy;&iecy;&gcy;&ocy;
-    </span>
-    <a href="#top">
-     &Ncy;&acy;&vcy;&iecy;&rcy;&khcy;
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<span>Современные интернет-технологии</span>
+<a href="#top">
+     Наверх
     </a>
-   </div>
-  </footer>
-  <button aria-label="&Vcy;&iecy;&rcy;&ncy;&ucy;&tcy;&softcy;&scy;&yacy; &ncy;&acy;&vcy;&iecy;&rcy;&khcy;" class="back-to-top" id="back-to-top" type="button">
-   &Ncy;&acy;&vcy;&iecy;&rcy;&khcy;
+</div>
+</footer>
+<button aria-label="Вернуться наверх" class="back-to-top" id="back-to-top" type="button">
+   Наверх
   </button>
- </body>
+</body>
 </html>

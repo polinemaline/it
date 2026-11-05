@@ -18,9 +18,9 @@ a:hover {color:#1b4338;}
 button {font:inherit;cursor:pointer;}
 button:focus-visible,a:focus-visible {outline:2px solid var(--accent);outline-offset:4px;}
 h1,h2,h3,p {margin-top:0;}
-h1,h2,h3 {font-weight:550;letter-spacing:-.038em;line-height:1.2;}
-h1 {font-family:Georgia,"Times New Roman",serif;font-size:clamp(66px,8vw,106px);font-weight:400;letter-spacing:-.055em;}
-h2 {font-family:Georgia,"Times New Roman",serif;font-size:clamp(37px,4.6vw,58px);font-weight:400;}
+h1,h2,h3 {font-weight:550;letter-spacing:-.025em;line-height:1.25;}
+h1 {font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,5.5vw,76px);font-weight:400;letter-spacing:-.055em;}
+h2 {font-family:Georgia,"Times New Roman",serif;font-size:clamp(31px,3.4vw,45px);font-weight:400;}
 h3 {font-size:clamp(21px,2.1vw,26px);font-weight:600;letter-spacing:-.025em;}
 h1 em,h2 em {font-style:normal;color:var(--accent);}
 strong {font-weight:650;}
@@ -39,13 +39,13 @@ strong {font-weight:650;}
 .mobile-menu[hidden] {display:none;}
 .mobile-menu a {display:block;text-decoration:none;border-bottom:1px solid var(--border);padding:10px 0;color:var(--ink);}
 .mobile-menu a:last-child {border:0;}
-.hero {min-height:620px;min-height:min(76svh,720px);display:flex;align-items:center;border-bottom:1px solid var(--border);}
+.hero {min-height:420px;display:flex;align-items:center;border-bottom:1px solid var(--border);}
 .hero-shell {width:min(calc(100% - 80px),var(--layout));margin:0 auto;}
-.hero-copy {max-width:840px;padding:70px 0 85px;}
+.hero-copy {max-width:820px;padding:70px 0;}
 .eyebrow,.section-index,.kicker,.mini-label,.card-type {font-size:11px;line-height:1.5;font-weight:700;letter-spacing:.125em;text-transform:uppercase;color:var(--accent);}
 .hero .eyebrow {margin-bottom:34px;}
 .hero h1 {margin:0 0 28px;}
-.hero-subtitle {color:var(--muted);max-width:590px;line-height:1.65;font-size:clamp(18px,2vw,22px);}
+.hero-subtitle {color:var(--muted);max-width:590px;line-height:1.65;font-size:clamp(17px,1.7vw,20px);}
 .hero-actions {display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin-top:36px;}
 .pill-btn {display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--accent);padding:11px 22px;border-radius:5px;font-size:14px;font-weight:600;color:var(--accent);}
 .pill-btn.primary {background:var(--accent);color:white;}
@@ -57,11 +57,6 @@ strong {font-weight:650;}
 .intro-content {max-width:var(--reading);}
 .intro-content p,.story-body > p {margin-bottom:22px;}
 .lead,.chapter-lead {font-size:21px;line-height:1.65;color:var(--ink);font-weight:450;}
-.audio-card {margin-top:37px;padding:23px 25px;border:1px solid var(--border);background:var(--paper);border-radius:7px;}
-.audio-main {display:flex;flex-direction:column;gap:5px;}
-.audio-main strong {font-size:15px;}
-.audio-main span {font-size:13px;color:var(--muted);}
-.audio-main audio {width:100%;margin-top:13px;max-width:560px;height:42px;}
 .toc-section {padding:88px 0 92px;background:var(--wash);border-bottom:1px solid var(--border);}
 .toc-section .container {display:grid;grid-template-columns:315px minmax(0,1fr);gap:75px;}
 .toc-heading .kicker {margin-bottom:15px;}
@@ -185,11 +180,11 @@ strong {font-weight:650;}
  .header-nav {display:none;}
  .header-menu {display:block;}
  .mobile-menu {top:64px;}
- .hero {min-height:590px;min-height:76svh;}
+ .hero {min-height:400px;}
  .hero-copy {padding:55px 0;}
  .hero .eyebrow {margin-bottom:25px;}
- h1 {font-size:clamp(59px,13vw,85px);}
- h2 {font-size:37px;}
+ h1 {font-size:clamp(43px,10vw,64px);}
+ h2 {font-size:34px;}
  .hero-subtitle {font-size:18px;}
  .section-pad {padding:54px 0;}
  .toc-section {padding:56px 0;}
@@ -213,3 +208,9 @@ strong {font-weight:650;}
  html {scroll-behavior:auto;}
  *,*::before,*::after {transition:none!important;animation:none!important;}
 }
+
+/* Neutral editorial treatment for the introductory navigation. */
+.hero-actions .pill-btn.primary {background:none;color:var(--accent);border:0;border-radius:0;border-bottom:1px solid var(--accent);padding:0 0 2px;font-weight:500;}
+.hero-actions .pill-btn.primary:hover {background:none;color:var(--ink);border-bottom-color:var(--ink);}
+.hero .eyebrow {margin-bottom:22px;}
+.hero h1 {max-width:850px;letter-spacing:-.035em;}
