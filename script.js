@@ -1,5 +1,20 @@
 (() => {
   'use strict';
+  document.documentElement.classList.add('js-enabled');
+  // Animate evidence bars once when they enter the viewport; preserve static values without JS.
+  const evidence = document.querySelector('.evidence-chart');
+  if (evidence && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        evidence.classList.add('is-visible');
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    observer.observe(evidence);
+  } else if (evidence) {
+    evidence.classList.add('is-visible');
+  }
+
   const progress = document.getElementById('reading-progress');
   const back = document.getElementById('back-to-top');
   let scrollQueued = false;
